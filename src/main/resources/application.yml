@@ -1,0 +1,5 @@
+server:
+  port: 8089
+logging:
+  level:
+    org.springframework.web: INFO        #Spring框架中的日志级别
