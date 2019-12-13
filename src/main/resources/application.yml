@@ -3,3 +3,30 @@ server:
 logging:
   level:
     org.springframework.web: INFO        #Spring框架中的日志级别
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lanmv?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    maxTotal: 300
+    defaultMaxPerRoute: 100
+    connectTimeout: 1000
+    connectionRequestTimeout: 500
+    socketTimeout: 10000
+    validateAfterInactivity: 1000
+    staleConnectionCheckEnabled: true
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false
+  devtools:
+    restart:
+      additional-paths: resources/**,static/**,templates/**
+mybatis-plus:
+  mapper-locations: classpath*:com/dk/easya/mapper/xml/*.xml #配置xml配置文件路径
+  #configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句

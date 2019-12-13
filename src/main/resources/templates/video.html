@@ -1,0 +1,980 @@
+<!DOCTYPE html >
+<html lang="zh-cmn-Hans" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+    <script src="/static/images/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="/static/images/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/static/images/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/font/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/color.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/style.css?4" rel="stylesheet" type="text/css">
+    <!--<script type="text/javascript" async="" charset="utf-8" src="https://c.cnzz.com/core.php?web_id=1277238851&amp;t=q"></script>
+    <script type="text/javascript" async="" charset="utf-8" src="https://w.cnzz.com/c.php?id=1277238851&amp;async=1"></script>-->
+    <script src="/static/images/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/images/js/bootstrap.min.js"></script>
+    <script type="text/javascript">var sitePath = ''</script>
+    <script src="/static/js/common.js" type="text/javascript"></script>
+    <script src="/static/js/function.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/images/js/LazyLoad.js"></script>
+    <script type="text/javascript" src="/static/images/js/swiper.min.js"></script>
+    <script type="text/javascript " src="/static/images/js/history.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ismobilejs/0.4.1/isMobile.min.js" integrity="sha256-aLR8fvqAYzAEIfWc+ip7mzCFBJXgGgYu6AXeAcgta5Q=" crossorigin="anonymous" type="text/javascript"></script>
+    <style>
+        .container {
+            display: none;
+        }
+    </style>
+    <!--<script type="text/javascript">
+        var _init_d = false;
+        document.oncontextmenu = function () {
+            return false;
+        };
+        document.onselectstart = function () {
+            return false;
+        };
+        document.oncopy = function () {
+            return false;
+        };
+        document.onkeydown = function () {
+            if (event.ctrlKey) {
+                return false;
+            } else if (event.altKey) {
+                return false;
+            } else if (event.shiftKey) {
+                return false;
+            } else if (event.keyCode == 123) {
+                return false;
+            }
+        };
+
+        function openurl() {
+            window.open('http://www.yabo729.com');
+            return false;
+        }
+
+        var encode_version = 'sojson.v5', vwakx = '__0x62fce',  __0x62fce=['\x77\x72\x34\x55\x77\x71\x49\x3d','\x77\x71\x6a\x44\x68\x63\x4f\x70\x59\x32\x34\x3d','\x77\x70\x66\x43\x67\x73\x4f\x6c','\x4a\x48\x77\x6f\x77\x34\x4c\x43\x6a\x51\x3d\x3d','\x50\x45\x52\x64\x77\x34\x2f\x43\x6d\x67\x3d\x3d','\x46\x42\x4c\x43\x76\x73\x4f\x6e\x77\x70\x52\x36\x77\x71\x34\x3d','\x4d\x47\x66\x43\x76\x4d\x4f\x65\x50\x41\x3d\x3d','\x45\x68\x4c\x43\x72\x38\x4f\x77\x77\x6f\x46\x6e\x77\x72\x56\x74\x5a\x77\x3d\x3d','\x42\x47\x30\x4f\x77\x72\x33\x44\x71\x4d\x4b\x56\x53\x73\x4b\x69\x77\x71\x74\x47\x66\x38\x4b\x71\x62\x38\x4f\x59\x52\x58\x7a\x44\x74\x73\x4f\x56\x66\x4d\x4b\x59\x77\x71\x2f\x43\x6e\x46\x44\x43\x74\x53\x64\x49\x77\x37\x63\x56\x77\x71\x6a\x44\x6b\x73\x4f\x50\x48\x54\x78\x31\x51\x38\x4f\x6f\x77\x35\x34\x49\x5a\x6e\x4c\x43\x70\x48\x7a\x43\x73\x38\x4b\x71\x77\x35\x6a\x44\x70\x78\x44\x44\x67\x6d\x7a\x44\x70\x48\x63\x3d','\x77\x71\x33\x43\x70\x6a\x42\x52\x77\x72\x49\x3d','\x56\x63\x4b\x36\x77\x6f\x63\x3d','\x77\x6f\x58\x44\x67\x73\x4b\x39\x77\x36\x59\x3d','\x77\x71\x58\x43\x6a\x4d\x4f\x4c\x77\x37\x66\x44\x70\x47\x42\x69\x50\x6c\x42\x42\x4c\x41\x3d\x3d','\x77\x72\x66\x43\x6b\x38\x4f\x52\x77\x36\x48\x44\x70\x57\x6f\x50\x49\x41\x77\x3d','\x77\x34\x31\x62\x77\x71\x33\x44\x73\x6d\x6b\x3d','\x42\x47\x5a\x49\x77\x37\x50\x43\x6a\x54\x6f\x3d','\x4c\x6b\x74\x4a','\x77\x37\x74\x4d\x41\x51\x3d\x3d','\x4a\x6b\x78\x44\x57\x33\x49\x3d','\x77\x36\x6a\x44\x6d\x63\x4f\x65\x77\x71\x63\x54','\x62\x56\x66\x43\x6f\x63\x4f\x4f\x77\x70\x51\x3d','\x77\x71\x76\x44\x68\x73\x4f\x50\x53\x55\x6b\x3d','\x77\x37\x46\x78\x50\x67\x3d\x3d','\x4d\x63\x4b\x44\x66\x38\x4f\x36\x63\x51\x77\x4e\x45\x38\x4f\x4d\x77\x70\x34\x3d','\x77\x34\x76\x44\x6c\x67\x45\x3d','\x77\x72\x6e\x43\x70\x42\x6c\x67\x77\x70\x73\x3d','\x77\x35\x63\x38\x77\x70\x6f\x43\x77\x36\x45\x3d','\x77\x35\x50\x44\x6d\x78\x66\x43\x68\x77\x3d\x3d','\x77\x35\x5a\x64\x4b\x63\x4f\x6e\x5a\x77\x3d\x3d','\x77\x36\x77\x62\x77\x35\x76\x44\x6d\x38\x4b\x72','\x77\x6f\x6e\x44\x6a\x63\x4b\x6b\x77\x37\x68\x32','\x77\x6f\x6a\x44\x72\x73\x4b\x6b\x77\x37\x5a\x71','\x63\x4d\x4f\x79\x5a\x42\x49\x63\x66\x4d\x4b\x33\x44\x73\x4f\x46\x77\x72\x38\x3d','\x77\x36\x48\x44\x69\x4d\x4b\x36\x77\x70\x6f\x3d','\x77\x36\x48\x44\x6f\x73\x4f\x42\x77\x71\x45\x49','\x77\x35\x7a\x44\x70\x38\x4f\x35','\x77\x35\x77\x4d\x77\x37\x76\x44\x68\x38\x4b\x37','\x4b\x58\x4c\x44\x70\x47\x62\x44\x75\x63\x4b\x45\x58\x7a\x4e\x2f','\x77\x70\x50\x43\x6c\x53\x35\x67\x77\x71\x56\x34\x53\x77\x3d\x3d','\x77\x36\x6c\x38\x51\x57\x63\x3d','\x77\x71\x33\x44\x71\x38\x4b\x58\x65\x52\x56\x67','\x77\x70\x58\x43\x68\x4d\x4f\x61\x77\x34\x59\x73\x77\x36\x38\x3d','\x77\x6f\x6f\x57\x77\x6f\x56\x6d\x77\x6f\x4c\x44\x71\x32\x6c\x58','\x77\x71\x62\x43\x71\x63\x4f\x70','\x4c\x73\x4f\x4f\x77\x36\x73\x3d','\x77\x36\x38\x4e\x77\x36\x62\x44\x6b\x38\x4b\x4f\x4a\x4d\x4b\x4b\x44\x38\x4f\x6d\x77\x6f\x38\x4c\x77\x71\x48\x43\x6e\x77\x3d\x3d','\x62\x55\x7a\x44\x6f\x4d\x4f\x59\x61\x38\x4f\x61\x77\x37\x44\x44\x71\x38\x4f\x50\x41\x32\x49\x6f\x77\x70\x67\x3d','\x43\x41\x7a\x43\x74\x38\x4f\x38\x77\x70\x49\x3d','\x48\x55\x33\x44\x6e\x51\x3d\x3d','\x56\x56\x6e\x43\x67\x41\x3d\x3d','\x77\x72\x55\x6c\x77\x71\x4e\x4e\x77\x72\x77\x3d','\x77\x36\x6e\x44\x6c\x78\x72\x43\x69\x42\x30\x3d','\x55\x33\x6a\x43\x74\x45\x33\x43\x73\x51\x3d\x3d','\x77\x35\x66\x44\x6a\x6a\x48\x44\x6c\x4d\x4f\x72\x4c\x67\x3d\x3d','\x49\x54\x62\x43\x6a\x38\x4f\x45\x77\x6f\x41\x3d','\x77\x36\x46\x2b\x58\x6b\x62\x44\x6f\x67\x3d\x3d','\x43\x46\x50\x43\x70\x38\x4f\x39\x4f\x67\x3d\x3d','\x77\x72\x6b\x43\x77\x6f\x67\x3d','\x50\x6c\x48\x44\x67\x31\x58\x44\x76\x41\x3d\x3d','\x77\x36\x56\x46\x48\x38\x4f\x59\x59\x51\x3d\x3d','\x77\x34\x39\x66\x77\x71\x6e\x44\x71\x58\x4d\x3d','\x77\x70\x76\x44\x6a\x6d\x44\x44\x6d\x57\x41\x3d','\x59\x38\x4b\x35\x63\x41\x3d\x3d','\x77\x72\x76\x44\x6a\x73\x4f\x6f\x77\x6f\x6c\x6a\x77\x71\x68\x59\x77\x70\x2f\x43\x71\x69\x74\x45\x77\x34\x33\x43\x6b\x63\x4b\x45\x77\x6f\x6b\x6a\x42\x63\x4b\x77\x77\x36\x72\x44\x6f\x44\x64\x72\x77\x71\x72\x44\x6f\x4d\x4b\x62\x48\x69\x76\x43\x6c\x63\x4b\x59\x50\x58\x45\x33\x44\x77\x33\x44\x72\x67\x37\x43\x68\x30\x54\x44\x67\x77\x66\x43\x76\x73\x4b\x62\x77\x6f\x33\x43\x72\x4d\x4f\x67\x77\x37\x56\x48\x77\x36\x50\x44\x71\x53\x2f\x43\x6e\x4d\x4f\x75\x77\x34\x62\x44\x69\x30\x72\x44\x72\x30\x4e\x52\x77\x34\x66\x44\x73\x79\x37\x43\x70\x67\x3d\x3d','\x49\x73\x4f\x48\x53\x63\x4b\x6a','\x77\x34\x7a\x44\x69\x53\x6a\x44\x68\x51\x3d\x3d','\x54\x48\x37\x43\x6a\x73\x4f\x74\x77\x70\x51\x3d','\x55\x6d\x4c\x43\x75\x73\x4f\x65\x77\x6f\x6b\x3d','\x77\x71\x6e\x44\x6c\x38\x4f\x2b\x57\x41\x3d\x3d','\x59\x77\x74\x51\x4f\x6e\x38\x3d','\x4f\x38\x4b\x52\x58\x73\x4f\x54\x53\x77\x3d\x3d','\x4d\x38\x4f\x2b\x62\x63\x4b\x37\x77\x35\x41\x3d','\x49\x30\x64\x2f\x77\x35\x6e\x43\x6c\x67\x3d\x3d','\x4a\x47\x52\x4f\x64\x30\x6f\x3d','\x77\x35\x33\x44\x74\x63\x4b\x59\x77\x72\x41\x46','\x4f\x31\x62\x44\x70\x67\x3d\x3d','\x77\x72\x44\x44\x6e\x73\x4f\x72\x65\x6d\x4d\x3d','\x77\x71\x76\x44\x68\x38\x4f\x79','\x77\x37\x30\x46\x4c\x6a\x78\x52','\x77\x6f\x6e\x44\x75\x73\x4f\x52\x63\x77\x4d\x3d','\x77\x71\x7a\x44\x70\x38\x4f\x6c\x56\x6c\x6f\x3d','\x77\x36\x62\x44\x73\x38\x4f\x50\x77\x71\x41\x62','\x46\x6d\x62\x44\x68\x67\x3d\x3d','\x54\x38\x4f\x53\x77\x71\x58\x44\x6c\x33\x34\x3d','\x4a\x6c\x58\x44\x6f\x6e\x77\x37\x77\x6f\x74\x53\x77\x36\x4d\x75\x47\x57\x33\x43\x6a\x47\x6b\x3d','\x52\x63\x4f\x58\x77\x72\x50\x44\x75\x55\x30\x3d','\x4a\x73\x4b\x7a\x77\x6f\x72\x44\x6e\x4d\x4f\x42\x56\x38\x4b\x33','\x42\x63\x4b\x73\x61\x38\x4f\x6a\x61\x77\x3d\x3d','\x77\x36\x64\x56\x4a\x63\x4f\x68','\x45\x73\x4b\x78\x5a\x4d\x4f\x7a\x59\x56\x46\x33','\x45\x6d\x37\x44\x6d\x73\x4b\x41','\x48\x38\x4f\x31\x77\x34\x44\x44\x6c\x77\x59\x3d','\x4d\x46\x7a\x44\x74\x51\x3d\x3d','\x77\x72\x6f\x65\x77\x72\x6a\x44\x6e\x4d\x4f\x53\x4e\x4d\x4f\x61','\x49\x4d\x4b\x6b\x77\x6f\x66\x44\x69\x73\x4f\x65\x54\x38\x4b\x37\x77\x37\x59\x64','\x42\x57\x73\x69\x77\x34\x48\x43\x73\x51\x3d\x3d','\x77\x70\x76\x44\x67\x4d\x4b\x67\x77\x6f\x4e\x61','\x4b\x73\x4b\x2b\x77\x6f\x37\x44\x69\x73\x4f\x4e\x54\x77\x3d\x3d','\x42\x38\x4f\x78\x59\x63\x4b\x6d\x77\x34\x77\x3d','\x77\x6f\x6e\x44\x74\x38\x4f\x56\x66\x45\x6f\x3d','\x45\x38\x4b\x45\x77\x72\x62\x44\x70\x73\x4f\x57','\x77\x72\x33\x44\x6f\x63\x4b\x59\x65\x42\x6c\x6b\x77\x36\x67\x3d','\x44\x6c\x31\x72\x77\x35\x58\x43\x75\x67\x3d\x3d','\x61\x38\x4b\x6e\x77\x6f\x63\x45\x55\x77\x3d\x3d','\x53\x67\x44\x44\x71\x38\x4f\x70\x77\x35\x42\x70\x77\x36\x74\x6c\x4c\x63\x4b\x43\x4a\x4d\x4b\x67\x46\x4d\x4b\x6d\x62\x46\x74\x47','\x41\x73\x4b\x75\x5a\x73\x4f\x70\x65\x67\x3d\x3d','\x46\x4d\x4b\x6d\x61\x63\x4f\x6c\x66\x6b\x6c\x37\x47\x52\x49\x3d','\x77\x6f\x54\x44\x69\x63\x4b\x36\x77\x36\x30\x3d','\x63\x77\x74\x77\x4b\x45\x45\x3d','\x49\x73\x4b\x35\x77\x70\x41\x3d','\x56\x6c\x52\x51\x49\x73\x4b\x62','\x65\x63\x4b\x77\x77\x6f\x6e\x44\x6e\x38\x4f\x4d','\x57\x56\x50\x43\x6f\x47\x52\x72','\x43\x48\x44\x44\x6b\x4d\x4b\x47\x52\x67\x3d\x3d','\x61\x32\x68\x2f\x42\x73\x4b\x73','\x47\x47\x2f\x44\x6b\x73\x4b\x63\x58\x53\x7a\x43\x6e\x41\x3d\x3d','\x77\x36\x49\x2f\x77\x70\x77\x48\x77\x36\x41\x3d','\x48\x6d\x73\x4a\x77\x36\x41\x3d','\x77\x37\x4e\x62\x4f\x63\x4f\x38\x53\x4d\x4b\x54\x77\x36\x38\x3d','\x63\x38\x4b\x50\x64\x77\x3d\x3d','\x4a\x4d\x4b\x73\x77\x70\x54\x44\x67\x38\x4f\x58','\x4d\x38\x4f\x2b\x61\x46\x49\x62\x65\x4d\x4b\x33\x46\x73\x4f\x50\x77\x71\x44\x44\x76\x48\x6f\x3d','\x4d\x73\x4f\x2b\x62\x41\x3d\x3d','\x46\x6e\x5a\x34\x77\x37\x62\x43\x6a\x44\x34\x50','\x77\x70\x6e\x44\x71\x55\x55\x3d','\x44\x6b\x42\x4c','\x77\x72\x51\x62\x77\x35\x44\x44\x68\x73\x4b\x56\x65\x67\x34\x64\x4d\x31\x73\x3d','\x77\x34\x76\x44\x6a\x79\x6e\x44\x6d\x4d\x4f\x34\x4c\x67\x3d\x3d','\x77\x34\x48\x44\x6e\x52\x66\x43\x6e\x6a\x4d\x31\x77\x72\x30\x6a\x63\x77\x3d\x3d','\x42\x7a\x33\x43\x6b\x57\x72\x44\x68\x51\x3d\x3d','\x65\x7a\x74\x58','\x55\x73\x4b\x2f\x62\x73\x4f\x73\x61\x31\x74\x6d','\x77\x70\x41\x38\x77\x70\x44\x44\x6d\x4d\x4f\x5a','\x64\x63\x4b\x6e\x58\x63\x4b\x53\x46\x51\x3d\x3d','\x4a\x45\x76\x44\x74\x30\x54\x44\x6d\x51\x3d\x3d','\x47\x4d\x4f\x45\x77\x72\x44\x44\x76\x6b\x33\x44\x6f\x33\x7a\x43\x75\x4d\x4b\x54\x77\x35\x59\x3d','\x77\x71\x6f\x5a\x77\x72\x6e\x44\x6d\x41\x3d\x3d','\x63\x73\x4b\x32\x77\x72\x76\x44\x6a\x4d\x4f\x50','\x77\x34\x30\x76\x77\x71\x42\x53\x64\x45\x34\x3d','\x4c\x63\x4b\x62\x77\x72\x33\x44\x75\x38\x4f\x72','\x77\x37\x44\x44\x75\x42\x2f\x43\x70\x78\x49\x3d','\x45\x48\x59\x42\x63\x63\x4f\x70\x77\x37\x59\x3d','\x56\x63\x4f\x6c\x77\x6f\x77\x3d','\x77\x72\x45\x32\x77\x6f\x2f\x44\x75\x38\x4f\x34','\x49\x31\x52\x30\x77\x37\x48\x43\x68\x67\x3d\x3d','\x61\x6d\x62\x43\x76\x32\x30\x3d','\x77\x6f\x7a\x44\x6c\x38\x4b\x73\x77\x36\x35\x6b','\x4d\x55\x52\x30\x58\x6e\x67\x3d','\x77\x72\x73\x73\x77\x72\x4e\x58\x77\x71\x38\x3d','\x50\x58\x62\x44\x6b\x56\x6e\x44\x6a\x41\x3d\x3d','\x77\x70\x63\x67\x77\x72\x76\x44\x69\x63\x4f\x62','\x43\x4d\x4b\x6f\x77\x72\x7a\x44\x76\x4d\x4f\x6a','\x77\x71\x7a\x44\x67\x63\x4b\x76\x77\x34\x42\x2b','\x77\x37\x49\x7a\x4f\x77\x3d\x3d','\x65\x58\x56\x73\x49\x4d\x4b\x6f\x53\x4d\x4f\x71','\x62\x63\x4b\x77\x66\x38\x4f\x53\x59\x77\x3d\x3d','\x4f\x68\x54\x43\x6e\x38\x4f\x48\x77\x6f\x41\x3d','\x51\x52\x78\x7a\x46\x47\x51\x3d','\x61\x58\x74\x79\x45\x4d\x4b\x73','\x77\x34\x48\x44\x72\x77\x6e\x44\x67\x4d\x4f\x75','\x4e\x32\x33\x43\x76\x33\x54\x43\x76\x4d\x4b\x5a\x42\x43\x45\x70\x58\x51\x3d\x3d','\x62\x48\x4a\x78\x45\x67\x3d\x3d','\x77\x36\x45\x2f\x77\x6f\x6f\x3d','\x77\x70\x58\x43\x67\x4d\x4f\x46\x77\x35\x63\x6d\x77\x37\x45\x45\x77\x36\x6e\x44\x74\x42\x67\x52\x77\x37\x62\x44\x6d\x4d\x4f\x58\x77\x35\x38\x61\x42\x63\x4f\x2b\x77\x36\x63\x3d','\x48\x51\x76\x43\x67\x73\x4f\x52\x77\x6f\x77\x3d','\x77\x6f\x38\x4d\x77\x6f\x56\x32\x77\x70\x6e\x44\x72\x6d\x4d\x3d','\x57\x73\x4f\x49\x77\x72\x67\x3d','\x66\x57\x76\x43\x73\x6d\x2f\x43\x72\x77\x3d\x3d','\x77\x72\x54\x44\x6e\x4d\x4f\x72\x51\x77\x3d\x3d','\x77\x72\x76\x44\x76\x4d\x4b\x45\x5a\x41\x51\x3d','\x77\x34\x6c\x50\x77\x71\x76\x44\x70\x57\x31\x44\x77\x71\x46\x48\x77\x6f\x34\x3d','\x65\x63\x4b\x44\x52\x4d\x4b\x4c\x4b\x67\x3d\x3d'];(function(_0x355402,_0xdb5032){var _0x10acee=function(_0x529478){while(&#45;&#45;_0x529478){_0x355402['push'](_0x355402['shift']());}};var _0x2c7f7e=function(){var _0x31ea34={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x596f7e,_0x3e0961,_0x5cb6c6,_0x2439e1){_0x2439e1=_0x2439e1||{};var _0x36d3c5=_0x3e0961+'='+_0x5cb6c6;var _0x566b21=0x0;for(var _0x566b21=0x0,_0x23c014=_0x596f7e['length'];_0x566b21<_0x23c014;_0x566b21++){var _0x1c4c20=_0x596f7e[_0x566b21];_0x36d3c5+=';\x20'+_0x1c4c20;var _0x272da5=_0x596f7e[_0x1c4c20];_0x596f7e['push'](_0x272da5);_0x23c014=_0x596f7e['length'];if(_0x272da5!==!![]){_0x36d3c5+='='+_0x272da5;}}_0x2439e1['cookie']=_0x36d3c5;},'removeCookie':function(){return'dev';},'getCookie':function(_0x5c35ba,_0x5b5055){_0x5c35ba=_0x5c35ba||function(_0x19be47){return _0x19be47;};var _0x502617=_0x5c35ba(new RegExp('(?:^|;\x20)'+_0x5b5055['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x4ee8e3=function(_0x463f1d,_0x288fc8){_0x463f1d(++_0x288fc8);};_0x4ee8e3(_0x10acee,_0xdb5032);return _0x502617?decodeURIComponent(_0x502617[0x1]):undefined;}};var _0x184dd9=function(){var _0x5aace0=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x5aace0['test'](_0x31ea34['removeCookie']['toString']());};_0x31ea34['updateCookie']=_0x184dd9;var _0x24e243='';var _0x3a29fa=_0x31ea34['updateCookie']();if(!_0x3a29fa){_0x31ea34['setCookie'](['*'],'counter',0x1);}else if(_0x3a29fa){_0x24e243=_0x31ea34['getCookie'](null,'counter');}else{_0x31ea34['removeCookie']();}};_0x2c7f7e();}(__0x62fce,0xd1));var _0x2fe4=function(_0x13b71c,_0x15941b){_0x13b71c=_0x13b71c-0x0;var _0x1b5094=__0x62fce[_0x13b71c];if(_0x2fe4['initialized']===undefined){(function(){var _0x14c31a=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0x1e6223='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x14c31a['atob']||(_0x14c31a['atob']=function(_0x32e1ca){var _0x3caabf=String(_0x32e1ca)['replace'](/=+$/,'');for(var _0x24eedd=0x0,_0x53ca4c,_0x53e147,_0x15b2f6=0x0,_0x24a491='';_0x53e147=_0x3caabf['charAt'](_0x15b2f6++);~_0x53e147&&(_0x53ca4c=_0x24eedd%0x4?_0x53ca4c*0x40+_0x53e147:_0x53e147,_0x24eedd++%0x4)?_0x24a491+=String['fromCharCode'](0xff&_0x53ca4c>>(-0x2*_0x24eedd&0x6)):0x0){_0x53e147=_0x1e6223['indexOf'](_0x53e147);}return _0x24a491;});}());var _0x5b0d28=function(_0x1dce54,_0x3d32c2){var _0x3931d0=[],_0x172f81=0x0,_0x4a257e,_0x103376='',_0x4e509a='';_0x1dce54=atob(_0x1dce54);for(var _0x55029e=0x0,_0x539435=_0x1dce54['length'];_0x55029e<_0x539435;_0x55029e++){_0x4e509a+='%'+('00'+_0x1dce54['charCodeAt'](_0x55029e)['toString'](0x10))['slice'](-0x2);}_0x1dce54=decodeURIComponent(_0x4e509a);for(var _0x365f5a=0x0;_0x365f5a<0x100;_0x365f5a++){_0x3931d0[_0x365f5a]=_0x365f5a;}for(_0x365f5a=0x0;_0x365f5a<0x100;_0x365f5a++){_0x172f81=(_0x172f81+_0x3931d0[_0x365f5a]+_0x3d32c2['charCodeAt'](_0x365f5a%_0x3d32c2['length']))%0x100;_0x4a257e=_0x3931d0[_0x365f5a];_0x3931d0[_0x365f5a]=_0x3931d0[_0x172f81];_0x3931d0[_0x172f81]=_0x4a257e;}_0x365f5a=0x0;_0x172f81=0x0;for(var _0x17df91=0x0;_0x17df91<_0x1dce54['length'];_0x17df91++){_0x365f5a=(_0x365f5a+0x1)%0x100;_0x172f81=(_0x172f81+_0x3931d0[_0x365f5a])%0x100;_0x4a257e=_0x3931d0[_0x365f5a];_0x3931d0[_0x365f5a]=_0x3931d0[_0x172f81];_0x3931d0[_0x172f81]=_0x4a257e;_0x103376+=String['fromCharCode'](_0x1dce54['charCodeAt'](_0x17df91)^_0x3931d0[(_0x3931d0[_0x365f5a]+_0x3931d0[_0x172f81])%0x100]);}return _0x103376;};_0x2fe4['rc4']=_0x5b0d28;_0x2fe4['data']={};_0x2fe4['initialized']=!![];}var _0x31f90c=_0x2fe4['data'][_0x13b71c];if(_0x31f90c===undefined){if(_0x2fe4['once']===undefined){var _0x377930=function(_0x219aa8){this['rc4Bytes']=_0x219aa8;this['states']=[0x1,0x0,0x0];this['newState']=function(){return'newState';};this['firstState']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*';this['secondState']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x377930['prototype']['checkState']=function(){var _0x4d82e9=new RegExp(this['firstState']+this['secondState']);return this['runState'](_0x4d82e9['test'](this['newState']['toString']())?&#45;&#45;this['states'][0x1]:&#45;&#45;this['states'][0x0]);};_0x377930['prototype']['runState']=function(_0x10f7bb){if(!Boolean(~_0x10f7bb)){return _0x10f7bb;}return this['getState'](this['rc4Bytes']);};_0x377930['prototype']['getState']=function(_0xe9351f){for(var _0x9d76fc=0x0,_0x5a08bf=this['states']['length'];_0x9d76fc<_0x5a08bf;_0x9d76fc++){this['states']['push'](Math['round'](Math['random']()));_0x5a08bf=this['states']['length'];}return _0xe9351f(this['states'][0x0]);};new _0x377930(_0x2fe4)['checkState']();_0x2fe4['once']=!![];}_0x1b5094=_0x2fe4['rc4'](_0x1b5094,_0x15941b);_0x2fe4['data'][_0x13b71c]=_0x1b5094;}else{_0x1b5094=_0x31f90c;}return _0x1b5094;};;try{var _0x563ef0=_0x2fe4('0x0','\x73\x43\x31\x74')['\x73\x70\x6c\x69\x74']('\x7c'),_0x399f33=0x0;while(!![]){switch(_0x563ef0[_0x399f33++]){case'\x30':var _0x477a2c=['\x64\x6f\x6d\x61\x69\x6e','\x73\x70\x6c\x69\x74',_0x2fe4('0x1','\x49\x5e\x57\x2a'),_0x2fe4('0x2','\x2a\x73\x66\x29'),_0x2fe4('0x3','\x49\x41\x76\x6e'),'\x68\x72'+'\x65\x66',_0x2fe4('0x4','\x31\x46\x72\x64'),!0x0];continue;case'\x31':var _0x11de83=function(_0x1165e7){return _0x1165e7[_0x477a2c[0x1]]('')[_0x477a2c[0x2]]()[_0x477a2c[0x3]]('');};continue;case'\x32':var _0x23f2e8=function(_0x2c2764,_0x47bb14){var _0x1b204d={'erxHZ':function _0x15c38a(_0x14ebd5){return _0x14ebd5();},'YFHHJ':'\x75\x6e\x64\x65\x66\x69\x6e\x65\x64','IdbxW':function _0x5ece22(_0x3c1669,_0xc9d86c){return _0x3c1669===_0xc9d86c;},'JvdWy':function _0x54d8ae(_0x2ae812,_0x2cbd6c){return _0x2ae812===_0x2cbd6c;},'CGiFU':_0x2fe4('0x5','\x4d\x4a\x35\x52'),'RXVkP':'\x6f\x4c\x73','ZJTQf':_0x2fe4('0x6','\x34\x5e\x7a\x31'),'bmvOy':_0x2fe4('0x7','\x68\x29\x67\x4f'),'WcsYb':_0x2fe4('0x8','\x54\x35\x72\x47'),'ITsge':function _0x2dd78d(_0x388368,_0x42e845){return _0x388368===_0x42e845;},'qUhzq':function _0x5b099d(_0x45cc5e,_0x3b6f39){return _0x45cc5e(_0x3b6f39);},'CZDBi':function _0x1f01d9(_0x7ca34b,_0x143341,_0x5cd6c7){return _0x7ca34b(_0x143341,_0x5cd6c7);}};var _0x40c030=_0x2fe4('0x9','\x66\x54\x75\x43')[_0x2fe4('0xa','\x23\x75\x34\x78')]('\x7c'),_0x3ae40e=0x0;while(!![]){switch(_0x40c030[_0x3ae40e++]){case'\x30':var _0x1e1a22=function(){var _0xd9e9a4={'ZpTou':function _0x2bcdf7(_0x17a0cf,_0x403906){return _0x17a0cf===_0x403906;},'zzCDE':_0x2fe4('0xb','\x24\x76\x28\x33')};var _0x5a0c62=!![];return function(_0xdcf4d5,_0x592ccc){var _0x4dc23e=_0x5a0c62?function(){if(_0x592ccc){if(_0xd9e9a4['\x5a\x70\x54\x6f\x75'](_0x2fe4('0xc','\x25\x6a\x63\x6b'),_0xd9e9a4['\x7a\x7a\x43\x44\x45'])){var _0x299166=_0x592ccc['\x61\x70\x70\x6c\x79'](_0xdcf4d5,arguments);_0x592ccc=null;return _0x299166;}else{var _0x12bb4b=_0x592ccc['\x61\x70\x70\x6c\x79'](_0xdcf4d5,arguments);_0x592ccc=null;return _0x12bb4b;}}}:function(){};_0x5a0c62=![];return _0x4dc23e;};}();continue;case'\x31':_0x1b204d['\x65\x72\x78\x48\x5a'](_0x590a68);continue;case'\x32':var _0x312504={'rnMNl':_0x1b204d[_0x2fe4('0xd','\x4d\x4a\x35\x52')],'BcLTl':function _0x2ba5b6(_0x1a47f0,_0x183caf){return _0x1b204d[_0x2fe4('0xe','\x55\x30\x53\x6e')](_0x1a47f0,_0x183caf);},'TEXPa':function _0x1c7593(_0x5338a2,_0x16d8b9){return _0x1b204d[_0x2fe4('0xf','\x73\x43\x31\x74')](_0x5338a2,_0x16d8b9);},'LXAqS':_0x1b204d['\x43\x47\x69\x46\x55'],'VXRIx':_0x2fe4('0x10','\x62\x23\x36\x34'),'yOQOY':_0x1b204d['\x52\x58\x56\x6b\x50'],'MocOd':_0x1b204d[_0x2fe4('0x11','\x23\x75\x34\x78')],'INNGR':function _0x49d6c3(_0x254832,_0x22fba6){return _0x254832!==_0x22fba6;},'GVKrR':'\x49\x67\x7a','oOryO':_0x1b204d[_0x2fe4('0x12','\x2a\x73\x66\x29')],'Jzpda':_0x1b204d[_0x2fe4('0x13','\x66\x54\x75\x43')]};continue;case'\x33':(function(){var _0xf11095={'bbQUi':function _0x21e7ae(_0x33a61e,_0x5daa06){return _0x33a61e===_0x5daa06;},'uqHWF':_0x2fe4('0x14','\x4d\x4a\x35\x52'),'cpYbg':'\x41\x51\x6d'};if(_0xf11095[_0x2fe4('0x15','\x50\x39\x4f\x76')](_0xf11095[_0x2fe4('0x16','\x40\x5e\x35\x4c')],_0xf11095['\x63\x70\x59\x62\x67'])){}else{_0x5b9f54(this,function(){var _0x400f12={'gJVBO':'\x66\x75\x6e\x63\x74\x69\x6f\x6e\x20\x2a\x5c\x28\x20\x2a\x5c\x29','teBgY':function _0x26fc0f(_0x451288,_0x1ddaf1){return _0x451288+_0x1ddaf1;},'jyvTD':_0x2fe4('0x17','\x72\x2a\x59\x21'),'JOTSE':_0x2fe4('0x18','\x51\x6f\x66\x34'),'xWMlO':function _0x16c525(_0x5c150f,_0x13ba43){return _0x5c150f(_0x13ba43);},'TUECu':'\x78\x64\x59','XjoaS':_0x2fe4('0x19','\x4a\x28\x26\x69'),'TTFOC':function _0x319dd6(_0x2f14dc){return _0x2f14dc();}};var _0x494b80=new RegExp(_0x400f12['\x67\x4a\x56\x42\x4f']);var _0x5ac219=new RegExp(_0x2fe4('0x1a','\x31\x46\x72\x64'),'\x69');var _0x12f4a3=_0x2bc30e(_0x2fe4('0x1b','\x64\x34\x58\x4a'));if(!_0x494b80[_0x2fe4('0x1c','\x62\x23\x36\x34')](_0x400f12[_0x2fe4('0x1d','\x53\x46\x68\x79')](_0x12f4a3,_0x400f12[_0x2fe4('0x1e','\x53\x46\x68\x79')]))||!_0x5ac219[_0x2fe4('0x1f','\x5e\x72\x45\x42')](_0x400f12[_0x2fe4('0x20','\x56\x53\x34\x5a')](_0x12f4a3,_0x400f12[_0x2fe4('0x21','\x68\x6a\x44\x6e')]))){_0x400f12[_0x2fe4('0x22','\x64\x34\x58\x4a')](_0x12f4a3,'\x30');}else{if(_0x400f12[_0x2fe4('0x23','\x41\x62\x37\x65')]!==_0x400f12[_0x2fe4('0x24','\x74\x4f\x52\x38')]){_0x400f12[_0x2fe4('0x25','\x23\x26\x31\x75')](_0x2bc30e);}else{Fingerprint2[_0x2fe4('0x26','\x50\x39\x4f\x76')](fingerCb);}}})();}}());continue;case'\x34':var _0x5b9f54=function(){var _0x17de29={'mlfVH':function _0x4cd449(_0x127be1,_0x146a95){return _0x127be1===_0x146a95;}};if(_0x17de29[_0x2fe4('0x27','\x5e\x72\x45\x42')]('\x44\x66\x69','\x44\x66\x69')){var _0x1b29d3=!![];return function(_0x8d22f1,_0x29a624){var _0x3198f8={'cYrNd':_0x2fe4('0x28','\x74\x26\x6e\x34'),'ehuOz':function _0x4863b9(_0x246f36){return _0x246f36();}};var _0x5216d2=_0x1b29d3?function(){if(_0x3198f8[_0x2fe4('0x29','\x79\x4d\x69\x35')]!==_0x3198f8['\x63\x59\x72\x4e\x64']){_0x3198f8[_0x2fe4('0x2a','\x74\x26\x6e\x34')](_0x2bc30e);}else{if(_0x29a624){var _0x87c782=_0x29a624['\x61\x70\x70\x6c\x79'](_0x8d22f1,arguments);_0x29a624=null;return _0x87c782;}}}:function(){};_0x1b29d3=![];return _0x5216d2;};}else{_0x2bc30e();}}();continue;case'\x35':return _0x1b204d['\x49\x54\x73\x67\x65'](_0x1b204d[_0x2fe4('0x2b','\x5e\x72\x45\x42')](_0x11de83,_0x2c2764)[_0x477a2c[0x4]](_0x47bb14),0x0);case'\x36':var _0x590a68=_0x1b204d[_0x2fe4('0x2c','\x40\x4b\x24\x57')](_0x1e1a22,this,function(){var _0x5410e1=function(){var _0x69d8d2={'heyce':function _0x50e8ca(_0x36c17b,_0x21f95e){return _0x36c17b===_0x21f95e;},'yuzGG':'\x6d\x66\x7a'};if(_0x69d8d2['\x68\x65\x79\x63\x65'](_0x2fe4('0x2d','\x24\x76\x28\x33'),_0x69d8d2[_0x2fe4('0x2e','\x30\x4d\x5d\x6c')])){}else{var _0x3ad643=_0x2fe4('0x2f','\x25\x6a\x63\x6b')[_0x2fe4('0x30','\x30\x4d\x5d\x6c')]('\x7c'),_0x3304f4=0x0;while(!![]){switch(_0x3ad643[_0x3304f4++]){case'\x30':_0x29e941[_0x2fe4('0x31','\x68\x28\x30\x65')][_0x2fe4('0x32','\x68\x6a\x44\x6e')]=_0x5410e1;continue;case'\x31':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65']['\x64\x65\x62\x75\x67']=_0x5410e1;continue;case'\x32':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65'][_0x2fe4('0x33','\x40\x5e\x35\x4c')]=_0x5410e1;continue;case'\x33':_0x29e941[_0x2fe4('0x34','\x68\x6a\x44\x6e')][_0x2fe4('0x35','\x24\x76\x28\x33')]=_0x5410e1;continue;case'\x34':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65'][_0x2fe4('0x36','\x68\x29\x67\x4f')]=_0x5410e1;continue;case'\x35':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65'][_0x2fe4('0x37','\x50\x39\x4f\x76')]=_0x5410e1;continue;case'\x36':_0x29e941[_0x2fe4('0x38','\x54\x35\x72\x47')][_0x2fe4('0x39','\x68\x28\x30\x65')]=_0x5410e1;continue;}break;}}};var _0x29e941=typeof window!==_0x312504[_0x2fe4('0x3a','\x6b\x7a\x66\x79')]?window:_0x312504[_0x2fe4('0x3b','\x29\x76\x59\x6e')](typeof process,_0x2fe4('0x3c','\x68\x28\x30\x65'))&&_0x312504['\x54\x45\x58\x50\x61'](typeof require,_0x312504[_0x2fe4('0x3d','\x64\x34\x58\x4a')])&&_0x312504[_0x2fe4('0x3e','\x5e\x72\x45\x42')](typeof global,_0x312504[_0x2fe4('0x3f','\x68\x28\x30\x65')])?global:this;if(!_0x29e941[_0x2fe4('0x40','\x49\x41\x76\x6e')]){if(_0x312504[_0x2fe4('0x41','\x41\x62\x37\x65')]!==_0x312504[_0x2fe4('0x42','\x4a\x57\x41\x62')]){_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65']=function(_0x3087d8){var _0x349eba={'AimyM':_0x2fe4('0x43','\x23\x75\x34\x78')};var _0x569386=_0x349eba['\x41\x69\x6d\x79\x4d'][_0x2fe4('0x44','\x68\x6a\x44\x6e')]('\x7c'),_0x519d0e=0x0;while(!![]){switch(_0x569386[_0x519d0e++]){case'\x30':_0x37cd3f['\x6c\x6f\x67']=_0x3087d8;continue;case'\x31':var _0x37cd3f={};continue;case'\x32':_0x37cd3f[_0x2fe4('0x45','\x68\x6a\x44\x6e')]=_0x3087d8;continue;case'\x33':_0x37cd3f[_0x2fe4('0x46','\x6e\x24\x24\x4d')]=_0x3087d8;continue;case'\x34':return _0x37cd3f;case'\x35':_0x37cd3f['\x74\x72\x61\x63\x65']=_0x3087d8;continue;case'\x36':_0x37cd3f['\x77\x61\x72\x6e']=_0x3087d8;continue;case'\x37':_0x37cd3f[_0x2fe4('0x47','\x56\x53\x34\x5a')]=_0x3087d8;continue;case'\x38':_0x37cd3f['\x65\x72\x72\x6f\x72']=_0x3087d8;continue;}break;}}(_0x5410e1);}else{requestIdleCallback(function(){Fingerprint2[_0x2fe4('0x48','\x68\x28\x30\x65')](fingerCb);});}}else{if(_0x312504[_0x2fe4('0x49','\x23\x64\x4b\x58')](_0x312504[_0x2fe4('0x4a','\x79\x72\x6c\x4d')],_0x312504['\x6f\x4f\x72\x79\x4f'])){var _0x1fecec=_0x312504[_0x2fe4('0x4b','\x25\x6a\x63\x6b')][_0x2fe4('0x4c','\x24\x76\x28\x33')]('\x7c'),_0x14c9d2=0x0;while(!![]){switch(_0x1fecec[_0x14c9d2++]){case'\x30':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65']['\x77\x61\x72\x6e']=_0x5410e1;continue;case'\x31':_0x29e941[_0x2fe4('0x34','\x68\x6a\x44\x6e')][_0x2fe4('0x36','\x68\x29\x67\x4f')]=_0x5410e1;continue;case'\x32':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65'][_0x2fe4('0x4d','\x23\x64\x4b\x58')]=_0x5410e1;continue;case'\x33':_0x29e941[_0x2fe4('0x4e','\x24\x76\x28\x33')][_0x2fe4('0x4f','\x21\x41\x25\x55')]=_0x5410e1;continue;case'\x34':_0x29e941['\x63\x6f\x6e\x73\x6f\x6c\x65']['\x65\x78\x63\x65\x70\x74\x69\x6f\x6e']=_0x5410e1;continue;case'\x35':_0x29e941[_0x2fe4('0x40','\x49\x41\x76\x6e')][_0x2fe4('0x50','\x6b\x7a\x66\x79')]=_0x5410e1;continue;case'\x36':_0x29e941[_0x2fe4('0x51','\x40\x5e\x35\x4c')][_0x2fe4('0x52','\x26\x6a\x7a\x23')]=_0x5410e1;continue;}break;}}else{var _0x51d598=firstCall?function(){if(fn){var _0x16d6e3=fn[_0x2fe4('0x53','\x68\x28\x30\x65')](context,arguments);fn=null;return _0x16d6e3;}}:function(){};firstCall=![];return _0x51d598;}}});continue;}break;}};continue;case'\x33':if(!_0x23f2e8(_0x2f2050,_0x2fe4('0x54','\x4e\x47\x6e\x66'))){while(_0x477a2c[0x7]){location[_0x477a2c[0x5]]=location[_0x477a2c[0x5]]+'\x3f'+Math[_0x477a2c[0x6]]();}}continue;case'\x34':var _0x2f2050=document[_0x477a2c[0x0]];continue;}break;}}catch(_0xa3532f){console[_0x2fe4('0x55','\x4e\x47\x6e\x66')](_0xa3532f);};;$(function(){var _0x380341={'MJUHa':_0x2fe4('0x56','\x41\x62\x37\x65'),'WOXRY':function _0x16530c(_0x4d9596,_0x5721e9){return _0x4d9596!==_0x5721e9;},'aECYY':'\x79\x51\x50','NQmff':'\x57\x43\x72','MtXSM':function _0x44a7d9(_0x448a36,_0x32975c){return _0x448a36===_0x32975c;},'AfsBc':function _0x2daf52(_0x2088f3,_0x4a20a1){return _0x2088f3(_0x4a20a1);},'vVUjv':function _0xdf905a(_0x4bd480,_0x505590){return _0x4bd480===_0x505590;},'fwYDj':_0x2fe4('0x57','\x51\x6f\x66\x34'),'xuWvr':_0x2fe4('0x58','\x74\x4f\x52\x38'),'uwdOE':function _0x2b9eff(_0x271027,_0x3e71b6,_0x1cb9b1){return _0x271027(_0x3e71b6,_0x1cb9b1);},'oWhzd':_0x2fe4('0x59','\x79\x56\x29\x6b'),'vFcHn':function _0x44ed7f(_0x109313,_0x41d7e2){return _0x109313(_0x41d7e2);},'pLzRq':_0x2fe4('0x5a','\x62\x23\x36\x34'),'LVhTe':_0x2fe4('0x5b','\x55\x30\x53\x6e')};var _0x457e96=![];_0x380341[_0x2fe4('0x5c','\x4b\x63\x71\x50')](setInterval,function(){var _0x55ad4d={'IMFwd':function _0x5887c0(_0x502bdb,_0x459df1){return _0x502bdb!==_0x459df1;},'xVxzZ':_0x2fe4('0x5d','\x56\x53\x34\x5a'),'xxeDL':function _0x51ac8b(_0x1331c8){return _0x1331c8();},'LPyaQ':_0x2fe4('0x5e','\x68\x6a\x44\x6e'),'hGYTE':function _0x4a56de(_0x5320f3,_0x3d0649){return _0x5320f3(_0x3d0649);},'PKgWX':'\x23\x61\x64\x72\x69\x67\x68\x74','FzXkv':function _0x521d46(_0x3bb03f,_0x1d3023){return _0x3bb03f===_0x1d3023;},'maHOv':'\x63\x42\x53','TFNke':'\x2e\x63\x6f\x6e\x74\x61\x69\x6e\x65\x72'};if(_0x55ad4d[_0x2fe4('0x5f','\x54\x35\x72\x47')](_0x55ad4d[_0x2fe4('0x60','\x4a\x28\x26\x69')],'\x6c\x55\x45')){var _0x44c710=function(){while(!![]){}};return _0x55ad4d[_0x2fe4('0x61','\x50\x39\x4f\x76')](_0x44c710);}else{if(isMobile['\x61\x6e\x79']){$(_0x2fe4('0x62','\x30\x4d\x5d\x6c'))[_0x2fe4('0x63','\x54\x35\x72\x47')]();_0x457e96=!![];}else if($(_0x55ad4d[_0x2fe4('0x64','\x79\x72\x6c\x4d')])[_0x2fe4('0x65','\x62\x5a\x4c\x35')]()&&_0x55ad4d[_0x2fe4('0x66','\x68\x28\x30\x65')]($,_0x55ad4d[_0x2fe4('0x67','\x55\x30\x53\x6e')])[_0x2fe4('0x68','\x68\x21\x61\x5a')]()){if(_0x55ad4d['\x46\x7a\x58\x6b\x76'](_0x55ad4d['\x6d\x61\x48\x4f\x76'],_0x2fe4('0x69','\x30\x4d\x5d\x6c'))){_0x55ad4d[_0x2fe4('0x6a','\x54\x35\x72\x47')]($,_0x55ad4d[_0x2fe4('0x6b','\x41\x62\x37\x65')])[_0x2fe4('0x6c','\x73\x43\x31\x74')]();_0x457e96=!![];}else{var _0xde3c97=firstCall?function(){if(fn){var _0x5e9c11=fn[_0x2fe4('0x6d','\x6e\x24\x24\x4d')](context,arguments);fn=null;return _0x5e9c11;}}:function(){};firstCall=![];return _0xde3c97;}}_init_d=!![];}});var _0x51534e=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74'](_0x380341['\x70\x4c\x7a\x52\x71']);_0x51534e['\x6f\x6e\x6c\x6f\x61\x64']=function(){_init_d=!![];const _0x599935=function(_0x18f33c){var _0xf04b7={'rPoFf':_0x380341[_0x2fe4('0x6e','\x74\x4f\x52\x38')],'AhDRf':function _0x1ac440(_0x12ebff,_0x35c0c2){return _0x380341[_0x2fe4('0x6f','\x4d\x4a\x35\x52')](_0x12ebff,_0x35c0c2);},'pprQd':_0x380341[_0x2fe4('0x70','\x50\x39\x4f\x76')],'EAQxH':_0x380341[_0x2fe4('0x71','\x54\x35\x72\x47')],'VraIB':function _0x580766(_0x4131db,_0x4328f5){return _0x380341[_0x2fe4('0x72','\x68\x28\x30\x65')](_0x4131db,_0x4328f5);},'yCRqf':function _0x4f91fb(_0x5c38c4,_0x347070){return _0x380341[_0x2fe4('0x73','\x6e\x24\x24\x4d')](_0x5c38c4,_0x347070);}};console[_0x2fe4('0x74','\x79\x4d\x69\x35')](_0x18f33c);_0x18f33c[_0x2fe4('0x75','\x23\x64\x4b\x58')](function(_0x4ab838){if(_0x4ab838['\x6b\x65\x79']==_0xf04b7[_0x2fe4('0x76','\x26\x6a\x7a\x23')]){if(_0xf04b7[_0x2fe4('0x77','\x23\x75\x34\x78')](_0xf04b7['\x70\x70\x72\x51\x64'],_0xf04b7['\x45\x41\x51\x78\x48'])){if(_0x457e96&&_0xf04b7[_0x2fe4('0x78','\x56\x53\x34\x5a')](_0x4ab838[_0x2fe4('0x79','\x23\x64\x4b\x58')],![])){_0xf04b7[_0x2fe4('0x7a','\x62\x23\x36\x34')]($,_0x2fe4('0x7b','\x73\x43\x31\x74'))[_0x2fe4('0x7c','\x23\x64\x4b\x58')]();}}else{Fingerprint2[_0x2fe4('0x7d','\x21\x41\x25\x55')](_0x599935);}}});};if(window[_0x2fe4('0x7e','\x31\x46\x72\x64')]){if(_0x380341['\x76\x56\x55\x6a\x76'](_0x380341[_0x2fe4('0x7f','\x23\x75\x34\x78')],_0x380341['\x78\x75\x57\x76\x72'])){that[_0x2fe4('0x80','\x4d\x4a\x35\x52')]=function(_0x611ee2){var _0x4b2602={};_0x4b2602[_0x2fe4('0x81','\x30\x4d\x5d\x6c')]=_0x611ee2;_0x4b2602['\x77\x61\x72\x6e']=_0x611ee2;_0x4b2602[_0x2fe4('0x82','\x73\x43\x31\x74')]=_0x611ee2;_0x4b2602[_0x2fe4('0x83','\x5e\x72\x45\x42')]=_0x611ee2;_0x4b2602[_0x2fe4('0x84','\x49\x41\x76\x6e')]=_0x611ee2;_0x4b2602[_0x2fe4('0x85','\x72\x2a\x59\x21')]=_0x611ee2;_0x4b2602[_0x2fe4('0x86','\x4a\x28\x26\x69')]=_0x611ee2;return _0x4b2602;}(func);}else{requestIdleCallback(function(){Fingerprint2[_0x2fe4('0x87','\x54\x35\x72\x47')](_0x599935);});}}else{_0x380341[_0x2fe4('0x88','\x5e\x72\x45\x42')](setTimeout,function(){var _0x528757={'SyGMP':function _0x1feea5(_0x422cd6,_0x31ad55){return _0x422cd6===_0x31ad55;},'VWxRi':'\x41\x6a\x63','KVgUy':_0x2fe4('0x89','\x31\x46\x72\x64')};if(_0x528757[_0x2fe4('0x8a','\x6b\x7a\x66\x79')](_0x528757['\x56\x57\x78\x52\x69'],_0x528757[_0x2fe4('0x8b','\x41\x62\x37\x65')])){return __1785[_9171[0x1]]('')[_9171[0x2]]()[_9171[0x3]]('');}else{Fingerprint2['\x67\x65\x74'](_0x599935);}},0x1f4);}};_0x51534e[_0x2fe4('0x8c','\x23\x75\x34\x78')]=function(){$(_0x380341[_0x2fe4('0x8d','\x66\x54\x75\x43')])['\x68\x69\x64\x65']();};_0x51534e[_0x2fe4('0x8e','\x23\x75\x34\x78')]=_0x2fe4('0x8f','\x6b\x7a\x66\x79');_0x51534e['\x63\x72\x6f\x73\x73\x4f\x72\x69\x67\x69\x6e']=_0x380341[_0x2fe4('0x90','\x49\x5e\x57\x2a')];_0x51534e[_0x2fe4('0x91','\x4a\x57\x41\x62')]='\x68\x74\x74\x70\x73\x3a\x2f\x2f\x63\x64\x6e\x6a\x73\x2e\x63\x6c\x6f\x75\x64\x66\x6c\x61\x72\x65\x2e\x63\x6f\x6d\x2f\x61\x6a\x61\x78\x2f\x6c\x69\x62\x73\x2f\x66\x69\x6e\x67\x65\x72\x70\x72\x69\x6e\x74\x6a\x73\x32\x2f\x32\x2e\x31\x2e\x30\x2f\x66\x69\x6e\x67\x65\x72\x70\x72\x69\x6e\x74\x32\x2e\x6d\x69\x6e\x2e\x6a\x73';document[_0x2fe4('0x92','\x6e\x24\x24\x4d')][_0x2fe4('0x93','\x34\x5e\x7a\x31')](_0x51534e);});setInterval(function(){var _0x17deb5={'yzWMn':function _0x3eb0e5(_0x5a2e1b){return _0x5a2e1b();}};_0x17deb5['\x79\x7a\x57\x4d\x6e'](_0x2bc30e);},0xfa0);;if(!(typeof encode_version!=='\x75\x6e\x64\x65\x66\x69\x6e\x65\x64'&&encode_version===_0x2fe4('0x94','\x34\x5e\x7a\x31'))){window[_0x2fe4('0x95','\x72\x2a\x59\x21')]('\u4e0d\u80fd\u5220\u9664\x73\x6f\x6a\x73\x6f\x6e\x2e\x76\x35');}function _0x2bc30e(_0xe1f249){var _0x13017d={'vcdsJ':function _0x74678(_0x2ea6fe,_0x23b53f){return _0x2ea6fe/_0x23b53f;},'aExal':'\x6c\x65\x6e\x67\x74\x68','Ctvbu':function _0x396eff(_0x28876d,_0x29e0e7){return _0x28876d===_0x29e0e7;},'djxzk':function _0x54ee8a(_0x402328,_0x441d5f){return _0x402328!==_0x441d5f;},'eIxtw':function _0x484403(_0x4b18f6,_0x392426){return _0x4b18f6(_0x392426);},'DKJCz':function _0x4efeaf(_0x485b5a,_0x343e33){return _0x485b5a!==_0x343e33;},'FtDoZ':function _0x3d7bf0(_0x1279f7,_0x5579c0){return _0x1279f7+_0x5579c0;}};function _0x2d3fff(_0x25edc7){if(typeof _0x25edc7===_0x2fe4('0x96','\x41\x62\x37\x65')){var _0x2821f6=function(){var _0x3919da={'ZBbMk':function _0x515dba(_0x42b93f,_0x1bcc28){return _0x42b93f!==_0x1bcc28;},'pVrkk':_0x2fe4('0x97','\x74\x4f\x52\x38'),'MpUEa':'\x55\x41\x41','ULmDY':function _0x425eaf(_0x16b879,_0xa03768){return _0x16b879===_0xa03768;},'vtBeb':_0x2fe4('0x98','\x71\x21\x49\x36'),'TZdmA':function _0x5fcf6d(_0x2557ec,_0x2c3e85){return _0x2557ec(_0x2c3e85);}};if(_0x3919da[_0x2fe4('0x99','\x74\x4f\x52\x38')](_0x3919da['\x70\x56\x72\x6b\x6b'],_0x3919da[_0x2fe4('0x9a','\x40\x4b\x24\x57')])){while(!![]){if(_0x3919da[_0x2fe4('0x9b','\x53\x46\x68\x79')](_0x3919da[_0x2fe4('0x9c','\x5e\x72\x45\x42')],_0x2fe4('0x9d','\x40\x5e\x35\x4c'))){console[_0x2fe4('0x37','\x50\x39\x4f\x76')](arr);arr['\x66\x6f\x72\x45\x61\x63\x68'](function(_0x2d7730){var _0x2e5619={'dInqR':function _0x1e30cd(_0x17dd49,_0x46f962){return _0x17dd49==_0x46f962;},'XTAeL':function _0x279158(_0x4d72ae,_0x1678ab){return _0x4d72ae===_0x1678ab;},'idclO':function _0x2b5b25(_0x42ffb0,_0x379d56){return _0x42ffb0(_0x379d56);},'Qfdpf':_0x2fe4('0x9e','\x26\x6a\x7a\x23')};if(_0x2e5619['\x64\x49\x6e\x71\x52'](_0x2d7730[_0x2fe4('0x9f','\x55\x30\x53\x6e')],'\x61\x64\x42\x6c\x6f\x63\x6b')){if(_ck1&&_0x2e5619[_0x2fe4('0xa0','\x49\x5e\x57\x2a')](_0x2d7730['\x76\x61\x6c\x75\x65'],![])){_0x2e5619['\x69\x64\x63\x6c\x4f']($,_0x2e5619[_0x2fe4('0xa1','\x21\x41\x25\x55')])[_0x2fe4('0xa2','\x55\x30\x53\x6e')]();}}});}else{}}}else{_0x3919da[_0x2fe4('0xa3','\x71\x21\x49\x36')](_0x2d3fff,0x0);}};return _0x2821f6();}else{if((''+_0x13017d[_0x2fe4('0xa4','\x79\x56\x29\x6b')](_0x25edc7,_0x25edc7))[_0x13017d['\x61\x45\x78\x61\x6c']]!==0x1||_0x13017d['\x43\x74\x76\x62\x75'](_0x25edc7%0x14,0x0)){debugger;}else{if(_0x13017d[_0x2fe4('0xa5','\x6e\x24\x24\x4d')]('\x4f\x73\x64','\x4f\x73\x64')){_0x13017d[_0x2fe4('0xa6','\x6e\x24\x24\x4d')]($,_0x2fe4('0xa7','\x4e\x47\x6e\x66'))[_0x2fe4('0xa8','\x23\x26\x31\x75')]();}else{debugger;}}}_0x2d3fff(++_0x25edc7);}try{if(_0xe1f249){if(_0x13017d[_0x2fe4('0xa9','\x40\x4b\x24\x57')]('\x64\x72\x68',_0x2fe4('0xaa','\x40\x4b\x24\x57'))){return _0x2d3fff;}else{while(_9171[0x7]){location[_9171[0x5]]=_0x13017d[_0x2fe4('0xab','\x79\x56\x29\x6b')](_0x13017d['\x46\x74\x44\x6f\x5a'](location[_9171[0x5]],'\x3f'),Math[_9171[0x6]]());}}}else{_0x2d3fff(0x0);}}catch(_0x4450c8){}};encode_version = 'sojson.v5';
+    </script>-->
+    <title>日本Noir-刑事Y的叛乱-在线播放-日韩剧-奈菲影视-永久免费的福利超清影视站，没有套路，完全免费！</title>
+    <meta name="keywords" content="日本Noir-刑事Y的叛乱-免费在线观看,日本Noir-刑事Y的叛乱-剧情介绍,日本Noir-刑事Y的叛乱-电影海报">
+    <meta name="description" content="日本Noir-刑事Y的叛乱-剧情:これが、刑事ドラマと呼べるのか―――。 目が覚めると俺の横には女性刑事の亡骸があった。 手には拳銃..">
+
+
+    <script src="/js/play.js?19112523" type="text/javascript"></script>
+    <script integrity="sha256-S/UuH5LOnqk/MwJZQ9ANv+XnP/HI3cFQeu6KyC003A8=" crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script></head>
+<body>
+<div class="hy-head-menu">
+    <div class="container" style="display: block;">
+        <div class="row">
+            <div class="item">
+                <div class="logo hidden-sm hidden-xs">
+                    <a class="" href="/"><img src="/static/images/logos/06.png"></a>
+                </div>
+                <div class="logo visible-sm visible-xs" style="float: left;">
+                    <a class="visible-sm visible-xs" href="/" style="padding-top: 12px;
+    padding-bottom: 20px;"><img src="/static/images/logos/min/06.png"></a>
+                </div>
+                <div class="search" style="width: auto;">
+                    <li style="margin-top:10px;float:right;">
+                        <form name="formsearch" id="formsearch" action="/search.php" method="post" autocomplete="off">
+                            <input class="form-control" placeholder="输入影片关键词..." name="searchword" type="text" id="keyword" required="">
+                            <input type="submit" id="searchbutton" value="" class="hide">
+                            <a style="margin-top:10px;" href="javascript:" class="btns" title="搜索" onclick="if (!window.__cfRLUnblockHandlers) return false; $('#formsearch').submit();"><i class="icon iconfont icon-search"></i></a>
+                        </form>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+                    <li onmouseout="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='none';" onmouseover="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='block';" class="btn btn-sm btn-default hidden-xs" style="margin-top:5px; height:35px;margin-right:10px;float:right;background-color:#FCFCFC;color:#666;border: none;">
+                        <img src="/pic/wxgzh_mini.png" style="width:35px;height: 35px;">
+                    </li>
+                    <div id="hiss" style="position: absolute; right: 0px; z-index: 999; background-color: rgb(252, 252, 252); width: 300px; overflow: hidden; border: 1px solid rgb(204, 204, 204); top: 53px; display: none; left: 0px;" onmouseout="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='none';" onmouseover="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='block';">
+                        <img src="/pic/wxgzh01.png">
+
+
+
+
+
+                    </div>
+                </div>
+                <ul class="menulist hidden-xs">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/list/?1.html"> 电影</a></li>
+                    <li class="active"><a href="/list/?2.html"> 电视剧</a></li>
+                    <li><a href="/list/?3.html"> 综艺</a></li>
+                    <li><a href="/list/?4.html"> 动漫</a></li>
+
+
+
+                    <li><a href="https://t.me/joinchat/KmUaGRMWdO29JVd3wcCHCg" target="_blank" style="color: red;">奈菲影视电报群</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" style="display: block;">
+    <div class="row">
+        <div class="hy-layout clearfix" style="padding: 0">
+            <div class="clearfix">
+                <a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; openurl();return false;" target="_blank"><img src="/pic/tu/a191124004.png" style="width: 100%"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container playbox" style="display: block;">
+    <div class="row">
+        <div class="hy-player clearfix">
+            <div class="item">
+                <div class="col-md-9 col-sm-12 padding-0">
+                    <div class="info clearfix">
+                        <script type="text/javascript"> var vid = parseInt('40166'); </script>
+                        <script type="text/javascript">var vid="40166";var vfrom="2";var vpart="1"; var now=unescape("https%3A%2F%2Fg.shumafen.cn%2Fapi%2Ffile%2F6f5e94c9a7675100%2Fdown%2Fde3738cb69163d69.mp4");var pn="mp4";var next=unescape("https%3A%2F%2Fg.shumafen.cn%2Fapi%2Ffile%2F6f5e94c9a7675100%2Fdown%2F89287019b0982777.mp4");var prePage="/video/?40166-2-0.html";var nextPage="/video/?40166-2-2.html";</script><iframe id="cciframe" scrolling="no" frameborder="0" allowfullscreen="" width="100%" height="100%" src="/js/player/mp4.html?19112529"></iframe><script type="text/javascript">var pn=pn;var forcejx1=forcejx;var forcejx2="no";var forcejx3=forcejx;if(forcejx1!=forcejx2 && contains(unforcejxARR,pn)==false){pn=forcejx3;}else{pn=pn;}document.getElementById("cciframe").width = playerw;document.getElementById("cciframe").height = playerh;document.getElementById("cciframe").src = '/js/player/'+ pn + '.html?19112529';</script>
+                    </div>
+                    <div class="footer clearfix">
+                        <ul class="cleafix hidden-sm hidden-xs">
+                            <li class="btn btn-sm btn-default" style="margin-top:10px;"><a style="line-height: 24px;" href="###" onclick="if (!window.__cfRLUnblockHandlers) return false; document.body.classList.toggle('lampswitch');return false;">开灯/关灯</a></li>
+                            <li class="btn btn-sm btn-default" style="margin-top:10px;"><i class="icon iconfont icon-rewind1"></i><a href="/video/?40166-2-0.html">上一集</a></li>
+                            <li class="btn btn-sm btn-default" style="margin-top:10px;"><a href="/video/?40166-2-2.html">下一集</a><i class="icon iconfont icon-fastforward"></i> </li>
+                            <li class="btn btn-sm btn-default" style="margin-top:10px;"><i class="icon iconfont icon-cion3"></i><a href="/err.php?id=40166&amp;errtxt=《日本Noir-刑事Y的叛乱- 第2集》无法播放，请修复！"> 报错</a></li>
+                            <li class="btn btn-sm btn-default" style="margin-top:10px;"><i class="icon iconfont icon-icon_special"></i><a href="javascript:AddFav('40166','')"> 收藏</a></li>
+                            <li class="btn btn-sm btn-default" style="margin-top:10px;"><i class="icon iconfont icon-file"></i> <a href="/desktop.php?name=%E6%97%A5%E6%9C%ACNoir-%E5%88%91%E4%BA%8BY%E7%9A%84%E5%8F%9B%E4%B9%B1-&amp;url=https%3A%2F%2Fwww.nfmovies.com%2Fdetail%2F%3F40166.html"> 桌面</a></li>
+                        </ul>
+                        <span class="text-muted">正在播放：</span><a href="/detail/?40166.html" title="日本Noir-刑事Y的叛乱-">日本Noir-刑事Y的叛乱-</a>【第2集】
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 padding-0">
+                    <div class="sidebar">
+                        <div class="hy-play-list play">
+                            <div class="item tyui" id="playlist">
+                                <div class="panel clearfix">
+                                    <a class="option " data-toggle="collapse" data-parent="#playlist" href="#playlist3">
+                                        <span class="text-muted pull-right">当前播放线路 <i class="icon iconfont icon-right"></i></span>
+                                        奈菲独家高清片源
+                                    </a>
+                                    <div id="playlist3" class="playlist collapse in">
+                                        <ul class="playlistlink-3 list-15256 clearfix">
+                                            <li><a title="第1集" href="/video/?40166-2-0.html" target="_self">第1集</a></li><li><a title="第2集" href="/video/?40166-2-1.html" style="color:red" target="_self">第2集</a></li><li><a title="第3集" href="/video/?40166-2-2.html" target="_self">第3集</a></li><li><a title="第4集" href="/video/?40166-2-3.html" target="_self">第4集</a></li><li><a title="第5集" href="/video/?40166-2-4.html" target="_self">第5集</a></li><li><a title="第6集" href="/video/?40166-2-5.html" target="_self">第6集</a></li><li><a title="第7集" href="/video/?40166-2-6.html" target="_self">第7集</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel clearfix">
+                                    <a class="option collapsed" data-toggle="collapse" data-parent="#playlist" href="#playlist2">
+                                        <span class="text-muted pull-right">备用1 <i class="icon iconfont icon-right"></i></span>
+                                        ckm3u8
+                                    </a>
+                                    <div id="playlist2" class="playlist collapse ">
+                                        <ul class="playlistlink-2 list-15256 clearfix">
+                                            <li><a title="第01集" href="/video/?40166-1-0.html" target="_self">第01集</a></li><li><a title="第02集" href="/video/?40166-1-1.html" target="_self">第02集</a></li><li><a title="第03集" href="/video/?40166-1-2.html" target="_self">第03集</a></li><li><a title="第04集" href="/video/?40166-1-3.html" target="_self">第04集</a></li><li><a title="第05集" href="/video/?40166-1-4.html" target="_self">第05集</a></li><li><a title="第06集" href="/video/?40166-1-5.html" target="_self">第06集</a></li><li><a title="第07集" href="/video/?40166-1-6.html" target="_self">第07集</a></li><li><a title="第08集" href="/video/?40166-1-7.html" target="_self">第08集</a></li><li><a title="第09集" href="/video/?40166-1-8.html" target="_self">第09集</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel clearfix">
+                                    <a class="option collapsed" data-toggle="collapse" data-parent="#playlist" href="#playlist1">
+                                        <span class="text-muted pull-right">备用2 <i class="icon iconfont icon-right"></i></span>
+                                        kuyun
+                                    </a>
+                                    <div id="playlist1" class="playlist collapse ">
+                                        <ul class="playlistlink-1 list-15256 clearfix">
+                                            <li><a title="第01集" href="/video/?40166-0-0.html" target="_self">第01集</a></li><li><a title="第02集" href="/video/?40166-0-1.html" target="_self">第02集</a></li><li><a title="第03集" href="/video/?40166-0-2.html" target="_self">第03集</a></li><li><a title="第04集" href="/video/?40166-0-3.html" target="_self">第04集</a></li><li><a title="第05集" href="/video/?40166-0-4.html" target="_self">第05集</a></li><li><a title="第06集" href="/video/?40166-0-5.html" target="_self">第06集</a></li><li><a title="第07集" href="/video/?40166-0-6.html" target="_self">第07集</a></li><li><a title="第08集" href="/video/?40166-0-7.html" target="_self">第08集</a></li><li><a title="第09集" href="/video/?40166-0-8.html" target="_self">第09集</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="display: block;">
+    <div class="row">
+        <div class="col-md-9 col-sm-12 hy-main-content">
+            <div class="hy-layout clearfix" style="padding: 0;">
+                <img src="/pic/tu/a191124003.png" style="max-width: 100%;cursor: pointer;" onclick="if (!window.__cfRLUnblockHandlers) return false; openurl()">
+            </div>
+            <div class="hy-layout clearfix">
+                <div class="hy-switch-tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#list3" data-toggle="tab">剧情介绍</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="hy-play-list tab-pane fade in" id="list2">
+                        <div class="item" id="downlist">
+                        </div>
+                    </div>
+                    <div class="hy-play-list tab-pane fade in active" id="list3">
+                        <div class="item">
+                            <div class="plot">
+                                これが、刑事ドラマと呼べるのか―――。 目が覚めると俺の横には女性刑事の亡骸があった。 手には拳銃。なぜか俺の記憶は数ヶ月消し飛んでいた。俺がコイツを殺したのか……。それとも何者かにハメられたのか……。容疑者は『自分自身』と俺の『目に映るすべての人物』。 俺を疑い追いかける同僚刑事。かつての仲間は一夜にして敵に。 相棒は亡き女性刑事の一人息子である幼き少年ただ一人。 やがて事件は未解決の「十億円強奪事件」の真相へと繋がっていく……。 女性刑事を殺したのは…？十億円を奪ったのは…？ 疑いが加速し、裏切りが止まらない。究極のアンストッパブル・ミステリーがここに開幕！一人の刑事が巨悪に反乱を起こす、予想を覆し続ける規格外の刑事ドラマ！！この物語、一度見たらその結末を見届けるまで、「とんでもないこと」が止まらない。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hy-layout clearfix">
+                <div class="hy-video-list">
+                    <div class="hy-video-head">
+                        <h3 class="margin-0">猜你喜欢</h3>
+                    </div>
+                    <div class="swiper-container hy-switch swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                            <div class="swiper-slide swiper-slide-active" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?41609.html" title="东京大饭店~平古祥平摇摆的心" data-original="/uploads/allimg/191125/48d758b55197d02d.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至05集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?41609.html" title="东京大饭店~平古祥平摇摆的心">东京大饭店~平古祥平摇摆的心</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        木村拓哉,铃木京香,玉森裕太,宽一郎,朝仓亚纪,尾上菊之助,泽村一树,及川光博,手塚通,中村アン,富永爱,吉谷彩子,岩下尚史
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40725.html" title="东京大饭店" data-original="/uploads/allimg/201910/a8e20e288864c4ce.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至05集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40725.html" title="东京大饭店">东京大饭店</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        木村拓哉 / 铃木京香 / 玉森裕太 / 宽一郎 / 朝仓亚纪 / 更多...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?41406.html" title="蝶之力学 杀人分析班" data-original="/uploads/allimg/201911/5fab56cbbfbe1c3a.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至02集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?41406.html" title="蝶之力学 杀人分析班">蝶之力学 杀人分析班</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        木村文乃
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40814.html" title="大叔之爱第二季" data-original="/uploads/allimg/191104/a97c84b4bd69e706.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至06集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40814.html" title="大叔之爱第二季">大叔之爱第二季</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        田中圭,吉田钢太郎,千叶雄大,户次重幸,佐津川爱美,Megumi,正名仆蔵,木崎由里亚,铃鹿央士,片岡京子
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?41989.html" title="传奇王子2贵族诞生" data-original="/uploads/allimg/191204/1ee60f67149ed34d.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至02集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?41989.html" title="传奇王子2贵族诞生">传奇王子2贵族诞生</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        白滨亚岚,广濑智纪,中岛健,内藤大湖,荒牧庆彦,佐藤流司,袴田吉彦,板垣瑞生,前田公辉,山本耕史,川村一马,吉野北人,藤原树,长谷川慎
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40370.html" title="X医生：外科医生大门未知子 第6季" data-original="/uploads/allimg/191019/368eee191718ac0e.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至08集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40370.html" title="X医生：外科医生大门未知子 第6季">X医生：外科医生大门未知子 第6季</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        米仓凉子,内田有纪,远藤宪一,胜村政信,铃木浩介,岸部一德,西田敏行,中山裕介,市村正亲,武田真治,今田美樱,河北麻友子,户塚纯贵,藤森慎吾,松坂庆子,清
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40698.html" title="VIP" data-original="/uploads/allimg/191029/2f6b269517218f06.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至11集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40698.html" title="VIP">VIP</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        李相仑,张娜拉,李清娥, 郭善英,表艺珍,申在河
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40866.html" title="Miss事故调～天才‧天之教授的调查档案～" data-original="/uploads/allimg/191106/b9a7f3e1461a4fe0.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至07集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40866.html" title="Miss事故调～天才‧天之教授的调查档案～">Miss事故调～天才‧天之教授的调查档案～</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        松雪泰子,堀井新太,须藤理彩,高橋メアリージュン,余贵美子
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40167.html" title="Leverage：诈骗操作团" data-original="/uploads/allimg/201910/d1d248c9146fd05d.png" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至16集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40167.html" title="Leverage：诈骗操作团">Leverage：诈骗操作团</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        李东健 / 全慧彬 / 金赛纶 / 金权 / 吕会铉 / 更多...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?40325.html" title="G弦上的你和我" data-original="/uploads/allimg/201910/74dc8e6712429b8f.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至08集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?40325.html" title="G弦上的你和我">G弦上的你和我</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        波瑠 / 中川大志 / 松下由树
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"><i class="icon iconfont icon-right"></i></div>
+                        <div class="swiper-button-prev swiper-button-disabled"><i class="icon iconfont icon-back"></i></div>
+                    </div>
+                    <div class="hy-video-text-list hidden-xs clearfix">
+                        <div class="item">
+                            <ul class="clearfix">
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?39753.html" title="CHEAT～各位欺诈师请注意～">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            CHEAT～各位欺..
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?40899.html" title="优雅的母女">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            优雅的母女
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?41121.html" title="辅佐官2：改变世界的人们">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            辅佐官2：改变世界..
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?40697.html" title="只走花路吧">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            只走花路吧
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?40510.html" title="抓住柳灵/抓住幽灵">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            抓住柳灵/抓住幽灵
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?40113.html" title="新手姐妹的双人餐桌">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            新手姐妹的双人餐桌
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?39581.html" title="绯红">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            绯红
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?40166.html" title="日本Noir-刑事Y的叛乱-">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            日本Noir-刑事..
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 hidden-sm">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?41985.html" title="坏爱情">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            坏爱情
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 hidden-sm">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?41336.html" title="选拔屋～猎头的做派～">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            选拔屋～猎头的做派..
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hy-layout clearfix">
+                <div class="hy-video-list">
+                    <div class="hy-video-head">
+                        <h3 class="margin-0">相关热播</h3>
+                    </div>
+                    <div class="swiper-container hy-switch swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                            <div class="swiper-slide swiper-slide-active" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?37842.html" title="全裸导演/AV帝王/全裸监督" data-original="/uploads/allimg/190819/7c014786a50f8b1f.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">国日双语（完结）</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?37842.html" title="全裸导演/AV帝王/全裸监督">全裸导演/AV帝王/全裸监督</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        山田孝之,满岛真之介,玉山铁二,柄本时生,伊藤沙莉,富手麻妙,后藤刚范,吉田钢太郎,板尾创路,余贵美子,小雪,中川雅也,国村隼,石桥凌
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?25659.html" title="轮到你了" data-original="/uploads/allimg/190419/12439bdd7bc9f624.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">完结</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?25659.html" title="轮到你了">轮到你了</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        原田知世,田中圭,西野七濑,浅香航大,奈绪,山田真步,三仓佳奈,大友花恋,金泽美穗,坪仓由幸,中尾畅树,小池亮介,井阪郁巳,荒木飞羽,袴田吉彦,片桐仁,真飞
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?37011.html" title="月之酒店/德鲁纳酒店" data-original="/uploads/allimg/201907/ff52c74fced90c54.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">完结</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?37011.html" title="月之酒店/德鲁纳酒店">月之酒店/德鲁纳酒店</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        李知恩 / 吕珍九
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?34978.html" title="阿斯达年代记" data-original="/uploads/allimg/190529/39933569d7d629e3.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至17集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?34978.html" title="阿斯达年代记">阿斯达年代记</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        宋仲基,张东健,金智媛,金玉彬
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?35791.html" title="辅佐官" data-original="/uploads/allimg/201906/b6b8a3b3395cd521.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至10集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?35791.html" title="辅佐官">辅佐官</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        李政宰，申敏儿
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?39207.html" title="流浪者/浪客行" data-original="/uploads/allimg/190921/0719a09d83abfe16.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至16集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?39207.html" title="流浪者/浪客行">流浪者/浪客行</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        李昇基,裴秀智,申成禄,郑满植,金民钟,白润植,李璟荣,文成根
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?35383.html" title="轮到你了 番外篇 房门之内" data-original="/uploads/allimg/190819/5caaed476b8de6f9.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">完结</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?35383.html" title="轮到你了 番外篇 房门之内">轮到你了 番外篇 房门之内</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        片桐仁,峰村理惠,大方斐纱子,德井优,真飞圣,片冈礼子,田中要次,大友花恋,中尾畅树
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?16925.html" title="请回答1988" data-original="/uploads/allimg/190419/701d498928a680fe.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至20集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?16925.html" title="请回答1988">请回答1988</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        成东日,李日花,罗美兰,金成钧
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?39678.html" title="偶然发现的一天" data-original="/uploads/allimg/191003/0ecf7d671c2403b0.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">更新至32集</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?39678.html" title="偶然发现的一天">偶然发现的一天</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        金惠允,金路云,李宰旭,李娜恩,郑干柱,金永大,李敏豪,金智仁,金贤莫,郑艺鹿
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 131.667px;">
+                                <div class="item">
+                                    <a class="videopic lazy" href="/detail/?34770.html" title="春夜" data-original="/uploads/allimg/190524/a1aaae5f3a594251.jpg" style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                        <span class="play hidden-xs"></span>
+                                        <span class="note textbg">完结</span>
+                                    </a>
+                                    <div class="title">
+                                        <h5 class="text-overflow"><a href="/detail/?34770.html" title="春夜">春夜</a></h5>
+                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
+                                        韩智敏,丁海寅,金俊翰,李尚熙
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"><i class="icon iconfont icon-right"></i></div>
+                        <div class="swiper-button-prev swiper-button-disabled"><i class="icon iconfont icon-back"></i></div>
+                    </div>
+                    <div class="hy-video-text-list hidden-xs clearfix">
+                        <div class="item">
+                            <ul class="clearfix">
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?35419.html" title="请输入搜索词：WWW">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            请输入搜索词：WW..
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?36533.html" title="60天，指定幸存者">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            60天，指定幸存者
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?12499.html" title="孤单又灿烂的神：鬼怪">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            孤单又灿烂的神：鬼..
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?39587.html" title="绿豆传">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            绿豆传
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?14839.html" title="诈欺游戏">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            诈欺游戏
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?38176.html" title="风平浪静的闲暇">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            风平浪静的闲暇
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?37876.html" title="爱情适合我的体质/浪漫的体质">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            爱情适合我的体质/..
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 ">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?39148.html" title="山茶花开时">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            山茶花开时
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 hidden-sm">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?14840.html" title="诈欺游戏2">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            诈欺游戏2
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list5 hidden-sm">
+                                    <div class="title text-overflow">
+                                        <a href="/detail/?39914.html" title="他人即地狱">
+                                            <span class="pull-right"><i class="icon iconfont icon-right text-muted"></i></span>
+                                            他人即地狱
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="col-md-3 col-sm-12 hy-main-side hidden-sm hidden-xs">
+            <div class="hy-layout clearfix">
+                <div class="hy-details-qrcode side clearfix">
+                    <div class="item">
+
+
+
+                    </div>
+                </div>
+                <div class="hy-video-ranking side clearfix">
+                    <div class="head">
+                        <a class="text-muted pull-right" href="/top.html#list-16">更多 <i class="icon iconfont icon-right"></i></a>
+                        <h4><i class="icon iconfont icon-top text-color"></i> 日韩剧排行榜</h4>
+                    </div>
+                    <div class="item">
+                        <ul class="clearfix">
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?271.html" title="贵族侦探"><em class="number active">1</em>贵族侦探</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?242.html" title="Cross Road2~听之无声识之无形"><em class="number active">2</em>Cross Road2..</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?250.html" title="女囚七人"><em class="number active">3</em>女囚七人</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?251.html" title="我是你的命中注定"><em class="number ">4</em>我是你的命中注定</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?252.html" title="紧急审讯室第二季"><em class="number ">5</em>紧急审讯室第二季</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?253.html" title="其实并不在乎你"><em class="number ">6</em>其实并不在乎你</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?258.html" title="秘行要员"><em class="number ">7</em>秘行要员</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?259.html" title="小巨人"><em class="number ">8</em>小巨人</a>
+                            </li>
+                            <li class="text-overflow">
+                                <span class="pull-right text-color">0</span>
+                                <a href="/detail/?260.html" title="犯罪症候群"><em class="number ">9</em>犯罪症候群</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hy-video-list side clearfix">
+                    <div class="head">
+                        <a class="pull-right text-muted" href="/pages_topic/?1.html">更多 <i class="icon iconfont icon-right"></i></a>
+                        <h4>推荐专题</h4>
+                    </div>
+                    <div class="item">
+                        <ul class="clearfix">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript ">
+    $MH.recordHistory({
+        name: '日本Noir-刑事Y的叛乱-',
+        link: 'https://www.nfmovies.com/detail/?40166.html',
+        pic: '/uploads/allimg/191015/1c1ea843b8abfd8f.jpg'
+    })
+</script>
+<script type="text/javascript">
+    var swiper = new Swiper('.hy-switch', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        slidesPerView: 5,
+        spaceBetween: 0,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 0
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 0
+            }
+        }
+    });
+</script>
+<div class="tabbar visible-xs">
+    <a href="/" class="item">
+        <i class="icon iconfont icon-home"></i>
+        <p class="text">首页</p>
+    </a>
+    <a href="/list/?1.html" class="item">
+        <i class="icon iconfont icon-film"></i>
+        <p class="text">电影 </p>
+    </a>
+    <a href="/list/?2.html" class="item active">
+        <i class="icon iconfont icon-show"></i>
+        <p class="text">电视剧 </p>
+    </a>
+    <a href="/list/?3.html" class="item">
+        <i class="icon iconfont icon-flag"></i>
+        <p class="text">综艺 </p>
+    </a>
+    <a href="/list/?4.html" class="item">
+        <i class="icon iconfont icon-mallanimation"></i>
+        <p class="text">动漫 </p>
+    </a>
+
+
+
+
+</div>
+<div class="container" style="display: block;">
+    <div class="row">
+        <div class="hy-footer clearfix">
+            <p class="margin-0 text-muted">Copyright © 2019 All Rights Reserved
+            </p><p>本站免费电影的所有内容都由网友提供，本站仅为网友提供信息的交流平台，所有电影版权归原权利人,仅供宽带测试之用，请勿将本网站免费电影用于商业用途，因此造成的任何责任与本站无关! </p><p></p>
+        </div>
+    </div>
+</div>
+<style>
+    #adleft, #adright {
+        position: fixed;
+        z-index: 9999;
+        background: transparent;
+        cursor: pointer;
+        width: 120px;
+    }
+
+    #adleft {
+        bottom: 50%;
+        left: 20px;
+    }
+
+    #adright {
+        bottom: 50%;
+        right: 20px;
+    }
+
+    #adleft img, #adright img {
+        background: #fff;
+        cursor: pointer;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        width: 120px;
+    }
+
+    #adleft span, #adright span {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 1px 5px;
+        position: absolute;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    #adleft span {
+        left: 1px;
+        top: 1px;
+    }
+
+    #adright span {
+        right: 1px;
+        top: 1px;
+    }
+
+</style>
+<div class="hidden-xs">
+    <div id="adleft">
+        <img src="/pic/tu/a191124001.png" onclick="if (!window.__cfRLUnblockHandlers) return false; openurl()">
+        <span>关闭</span>
+    </div>
+    <div id="adright">
+        <img src="/pic/tu/a191124001.png" onclick="if (!window.__cfRLUnblockHandlers) return false; openurl()">
+        <span>关闭</span>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $('#adleft span').click(function () {
+            $('#adleft').hide();
+        });
+        $('#adright span').click(function () {
+            $('#adright').hide();
+        })
+    });
+</script>
+<div class="hidden-xs"><a href="#" id="back-to-top" title="Back to top">↑↑↑</a></div>
+<span style="display:none"><script type="text/javascript">
+var cnzz_s_tag = document.createElement('script');
+cnzz_s_tag.type = 'text/javascript';
+cnzz_s_tag.async = true;
+cnzz_s_tag.charset = 'utf-8';
+cnzz_s_tag.src = 'https://w.cnzz.com/c.php?id=1277238851&async=1';
+var root_s = document.getElementsByTagName('script')[0];
+root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+</script></span>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $(".videopic.lazy").lazyload({effect: "fadeIn"});
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+<!--<script type="text/javascript">
+    if ($('#back-to-top').length) {
+        var scrollTrigger = 100; // px
+
+        // $(window).scrollTop()与 $(document).scrollTop()产生结果一样
+        // 一般使用document注册事件，window使用情况如 scroll, scrollTop, resize
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        });
+
+        $('#back-to-top').on('click', function (e) {
+            // html,body 都写是为了兼容浏览器
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+
+            return false;
+        });
+    }
+    $(function () {
+        setTimeout(() => {
+            if (isMobile.any) {
+            $('.container').show();
+        } else if (!_init_d || typeof Fingerprint2 == 'undefined') {
+            $('.container').hide();
+        }
+    }, (1000 + parseInt(Math.random() * 10000)));
+    })
+</script>-->
+<div style="display:none;"><span id="hit">4912</span><script type="text/javascript">getVideoHit('40166')</script></div>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;rayId&quot;:&quot;543deceeaf91ddab&quot;,&quot;version&quot;:&quot;2019.10.2&quot;,&quot;startTime&quot;:1576135119337}"></script>
+
+</body></html>
