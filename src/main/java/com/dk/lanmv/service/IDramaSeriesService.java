@@ -1,5 +1,6 @@
 package com.dk.lanmv.service;
 
+import com.dk.lanmv.common.ReturnModel;
 import com.dk.lanmv.entity.DramaSeries;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IDramaSeriesService extends IService<DramaSeries> {
 
+    public ReturnModel getDramaInfo(long dramaId);
+
+    public ReturnModel getDramaList(long mvId);
 }

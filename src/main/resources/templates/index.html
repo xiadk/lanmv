@@ -8,6 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta name="referrer" content="no-referrer" />
     <!--[if lt IE 9]>
     <script src="/static/images/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="/static/images/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -102,21 +103,21 @@
 
                         <!-- 懒懒独家样式-->
 
-                        <div class="col-md-2 col-sm-3 col-xs-4 ">
-                            <a class="videopic lazy" href="/detail"
-                               title="从前有座灵剑山电视版"
-                               data-original="/static/images/user.jpg"
+                        <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${inv}">
+                            <a class="videopic lazy"
+                               th:href="@{~/detail(mvId=${mv.getMvId()})}"
+                               th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
                                style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
                                 <span class="play hidden-xs"></span>
                                 <span class="note textbg">更新至20集</span>
                             </a>
                             <div class="title">
                                 <h5 class="text-overflow">
-                                    <a href="detail/Index.html" title="从前有座灵剑山电视版">从前有座灵剑山电视版</a>
+                                    <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                 </h5>
                             </div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                许凯,张榕容,朱元冰,高雨儿,郭晓婷,合文俊,郑雅文,李俊浩
+                            <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
+
                             </div>
                         </div>
 

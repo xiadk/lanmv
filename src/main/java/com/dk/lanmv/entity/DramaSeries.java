@@ -50,5 +50,11 @@ public class DramaSeries implements Serializable {
      */
     private String dramaOrigin;
 
+    /**
+     * 排序
+     */
+    private Integer sort;
+
+
 
 }

@@ -17,12 +17,14 @@ spring:
     validateAfterInactivity: 1000
     staleConnectionCheckEnabled: true
   mvc:
-    view:
-      prefix: /
-      suffix: .html
     static-path-pattern: /static/**
   thymeleaf:
+    mode: HTML
+    encoding: UTF-8
     cache: false
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
   devtools:
     restart:
       additional-paths: resources/**,static/**,templates/**

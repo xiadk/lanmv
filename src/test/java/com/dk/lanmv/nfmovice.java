@@ -179,7 +179,7 @@ public class nfmovice {
                 });
 
                 //集数：播放页url
-                Map<String, String> videoUrlMap = new HashMap<>();
+                Map<String, String> videoUrlMap = new LinkedHashMap<>();
                 Elements ckm3u8Element = panelElementMap.get("ckm3u8");
                 Elements onlyElement = panelElementMap.get("奈菲独家高清片源");
                 if (ckm3u8Element != null) {
@@ -201,6 +201,7 @@ public class nfmovice {
                 }
 
                 List<DramaSeries> list = new ArrayList<>();
+                int sort = 1;
                 for (Map.Entry<String, String> map : videoUrlMap.entrySet()) {
                     //集数
                     String numberStr = map.getKey();
@@ -269,9 +270,11 @@ public class nfmovice {
                     dramaSeries.setMvId(mv.getMvId());
                     dramaSeries.setDramaNumber(numberStr);
                     dramaSeries.setDramaOrigin(url);
+                    dramaSeries.setSort(sort);
 //                    dramaSeriesService.save(dramaSeries);
                     list.add(dramaSeries);
                     TimeUnit.MILLISECONDS.sleep(500);
+                    sort++;
                 }
                 dramaSeriesService.saveBatch(list);
             }

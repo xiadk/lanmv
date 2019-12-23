@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/DPlayer.min.css" />
+</head>
+<body>
+<div id="dplayer" th:attr="data-url=${dramaSeries.getDramaUrl()}" class="dplayer-danmaku"></div>
+<script src="/static/images/jquery/1.11.3/jquery.min.js"type="text/javascript"></script>
+<script src="/static/js/hls.js" type="text/javascript"></script>
+<script src="/static/js/DPlayer.min.js"></script>
+<script>
+    var video = document.getElementById('dplayer');
+    var url = video.getAttribute("data-url");
+    var dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        screenshot: true,
+        autoplay: true,
+        video: {
+            url: url,
+            type: 'customHls',
+            customType: {
+                customHls: function(video, player) {
+                    var hls = new Hls();
+                    hls.loadSource(video.src);
+                    hls.attachMedia(video);
+                },
+            },
+        },
+    });
+</script>
+</body>
+</html>
+

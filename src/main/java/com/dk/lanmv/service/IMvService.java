@@ -1,5 +1,6 @@
 package com.dk.lanmv.service;
 
+import com.dk.lanmv.common.ReturnModel;
 import com.dk.lanmv.entity.Mv;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IMvService extends IService<Mv> {
 
+    public ReturnModel getMvList(int categoryId);
+
+    public ReturnModel getMvInfo(long mvId);
 }
