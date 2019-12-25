@@ -65,7 +65,7 @@ public class HttpUtil {
             return getResponse(response);
         } catch (IOException e) {
             e.printStackTrace();
-            log.error("链接异常"+e);
+            log.error("链接异常:"+url,e);
         }
 
         return null;

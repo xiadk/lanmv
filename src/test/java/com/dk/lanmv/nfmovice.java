@@ -90,9 +90,9 @@ public class nfmovice {
         QueryWrapper<Mv> queryWrapper = new QueryWrapper();
         queryWrapper.select("mv_origin");
         List<Mv> mvs = mvMapper.selectList(queryWrapper);
-        Map<String, String> existMvOrigin = mvs.stream().collect(Collectors.toMap(Mv::getMvOrigin, Mv::getMvOrigin));
+        Map<String, String> existMvOrigin = mvs.stream().collect(Collectors.toMap(Mv::getMvOrigin, Mv::getMvOrigin, (key1, key2)->key1));
 
-        for (int page = 1; page <= 300; page++){
+        for (int page = 45; page <= 300; page++){
             String searchUrl = "https://www.nfmovies.com/search.php?page="+page+"&searchtype=5&order=time&player=ckm3u8";
             String search = httpUtil.doGet(searchUrl);
             Document searchParse = Jsoup.parse(search);

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="referrer" content="no-referrer" />
+    <!--[if lt IE 9]>
+    <script src="/static/images/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="/static/images/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link href="/static/images/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/font/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/color.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/style.css" rel="stylesheet" type="text/css">
+    <script src="/static/images/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/images/js/bootstrap.min.js"></script>
+    <script type="text/javascript">var sitePath=''</script>
+    <script src="/static/js/common.js" type="text/javascript"></script>
+    <script src="/static/js/function.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/images/js/LazyLoad.js"></script>
+    <script type="text/javascript" src="/static/images/js/swiper.min.js"></script>
+    <script type="text/javascript " src="/static/images/js/history.js"></script>
+    <title>alexandria mitchell-奈菲影视-永久免费的福利超清影视站，没有套路，完全免费！</title>
+    <meta name="keywords" content="alexandria mitchell,奈菲影视-永久免费的福利超清影视站，没有套路，完全免费！">
+    <meta name="description" content="alexandria mitchell,奈菲影视-永久免费的福利超清影视站，没有套路，完全免费！">
+</head>
+<body>
+<div th:replace="~{common/header::header}"></div><!--顶部公共 -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-sm-12 hy-main-content">
+            <div class="hy-layout clearfix">
+                <div class="hy-video-head"><span class="text-muted pull-right hidden-xs">当前第
+                    <span class="text-color" th:text="'“'+ ${pageModel.getPageIndex()}+'”'"></span>页</span><h4 class="margin-0">搜索到与<span class="text-color" th:text="'“'+ ${keyWord}+'”'" ></span>相关的<span
+                        class="text-color" th:text="'“'+ ${pageModel.getTotalCount()}+'”'"></span>条结果</h4></div>
+                <div class="hy-video-details active clearfix">
+                    <div class="item clearfix">
+                        <dl class="content"  th:each="mvInfo:${pageModel.getPageDatas()}">
+                            <dt><a class="videopic" th:href="@{/detail(mvId=${mvInfo.getMvId()})}"
+                                   th:style="'background: url(' + ${mvInfo.getMvPicture()} + ')  no-repeat; background-position:50% 50%; background-size: cover;'"><span
+                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a></dt>
+                            <dd class="clearfix">
+                                <div class="head"><h3><a th:href="@{/detail(mvId=${mvInfo.getMvId()})}" th:text="${mvInfo.getMvName()}"></a></h3></div>
+                                <div class="score">
+                                    <div class="star"><span class="star-cur" id="score-1"></span></div>
+                                    <span class="branch">0</span>
+                                    <script type="text/javascript">
+												var str = "0%" 
+												document.getElementById("score-1").style.width = (str.replace(".", ""))
+
+                                    </script>
+                                </div>
+                                <ul>
+                                    <li><span class="text-muted" th:text="'主演：'+${mvInfo.getMvStar()}"></span>
+                                    </li>
+                                    <li><span class="text-muted" >导演：</span><a  href='javascript:;' th:text="${mvInfo.getMvDirector()}"></a></li>
+                                    <li class="col-md-6 hidden-md hidden-sm hidden-xs padding-0"><span
+                                            class="text-muted" th:text="'地区：'+${mvInfo.getMvCountry()}"></span>
+                                    </li>
+                                    <li class="col-md-6 hidden-md hidden-sm hidden-xs padding-0"><span
+                                            class="text-muted">类型：</span><a href="javascript:;" title="动作片">动作片</a></li>
+                                    <li class="col-md-6 hidden-md hidden-sm hidden-xs padding-0"><span
+                                            class="text-muted" th:text="'语言：'+${mvInfo.getMvLanguage()}"></span>
+                                    </li>
+                                    <li class="col-md-6 hidden-md hidden-sm hidden-xs padding-0"><span
+                                            class="text-muted" th:text="'年份：'+${mvInfo.getMvShotYear()}"></span>
+                                    </li>
+                                </ul>
+                                <div class="block"><a class="text-muted" th:href="@{/detail(mvId=${mvInfo.getMvId()})}">查看详情 <i
+                                        class="icon iconfont icon-right"></i> </a></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="hy-page clearfix">
+                    <ul class="cleafix">
+                        <li><a th:href="@{/search(pageIndex=1, searchword=${keyWord})}">首页</a></li>
+                        <li><a th:href="@{/search(pageIndex=${pageModel.getPageIndex()-1}, searchword=${keyWord})}">上一页</a></li>
+                        <li class="visible-xs"><span class="num">1/200</span></li>
+                        <span th:if="${pageModel.getPageIndex() != 1}">
+                            <span th:if="${pageModel.getPageIndex() > 4}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()-4,pageModel.getPageIndex()-1)}"><a th:href="@{/search(pageIndex=${firstIndex}, searchword=${keyWord})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() <= 4}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(1,pageModel.getPageIndex()-1)}"><a th:href="@{/search(pageIndex=${firstIndex}, searchword=${keyWord})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                        </span>
+
+
+                        <li class="hidden-xs active"><a th:href="@{/search(pageIndex=${pageModel.getPageIndex()}, searchword=${keyWord})}" th:text="${pageModel.getPageIndex()}"></a></li>
+
+                        <!-- 分页当前页后面部分 -->
+                        <span th:if="${pageModel.getPageIndex() != pageModel.getTotalPage()}">
+                            <span th:if="${pageModel.getPageIndex() < 4 && pageModel.getTotalPage() < 6}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,pageModel.getTotalPage())}"><a th:href="@{/search(pageIndex=${firstIndex}, searchword=${keyWord})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() < 4 && pageModel.getTotalPage() > 6}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,6)}"><a th:href="@{/search(pageIndex=${firstIndex}, searchword=${keyWord})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() >= 4 && pageModel.getTotalPage()- pageModel.getPageIndex() > 2}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,pageModel.getPageIndex()+2)}"><a th:href="@{/search(pageIndex=${firstIndex}, searchword=${keyWord})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() >= 4 && pageModel.getTotalPage()- pageModel.getPageIndex() <= 2}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,pageModel.getTotalPage())}"><a th:href="@{/search(pageIndex=${firstIndex}, searchword=${keyWord})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                        </span>
+
+                        <li><a th:href="@{/search(pageIndex=${pageModel.getPageIndex()+1}, searchword=${keyWord})}">下一页</a></li>
+                        <li><a th:href="@{/search(pageIndex=${pageModel.getTotalPage()}, searchword=${keyWord})}">尾页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12 hy-main-side hidden-sm hidden-xs">
+            <div class="hy-layout clearfix">
+                <div class="hy-video-ranking side clearfix">
+                    <div class="head"><a class="text-muted pull-right" href="javascript:;">更多 <i
+                            class="icon iconfont icon-right"></i></a><h4><i
+                            class="icon iconfont icon-top text-color"></i> 电影排行榜</h4></div>
+                    <div class="item">
+                        <ul class="clearfix">
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="功夫瑜伽"><em
+                                    class="number active">1</em>功夫瑜伽</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="战狼2"><em
+                                    class="number active">2</em>战狼2</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="哭声"><em
+                                    class="number active">3</em>哭声</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="增速驱动"><em
+                                    class="number ">4</em>增速驱动</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="我们这种叛徒"><em
+                                    class="number ">5</em>我们这种叛徒</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="玩尽杀绝3：钻石计划"><em
+                                    class="number ">6</em>玩尽杀绝3：钻石计划</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="玩尽杀绝4：四人组"><em
+                                    class="number ">7</em>玩尽杀绝4：四人组</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="变形金刚3"><em
+                                    class="number ">8</em>变形金刚3</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="网文少年"><em
+                                    class="number ">9</em>网文少年</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hy-video-ranking side clearfix">
+                    <div class="head"><a class="text-muted pull-right" href="javascript:;">更多 <i
+                            class="icon iconfont icon-right"></i></a><h4><i
+                            class="icon iconfont icon-top text-color"></i> 电视剧排行榜</h4></div>
+                    <div class="item">
+                        <ul class="clearfix">
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="最后的大亨第一季"><em
+                                    class="number active">1</em>最后的大亨第一季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="卢克·凯奇第一季"><em
+                                    class="number active">2</em>卢克·凯奇第一季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="波尔达克第二季"><em
+                                    class="number active">3</em>波尔达克第二季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="处女情缘第三季"><em
+                                    class="number ">4</em>处女情缘第三季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="明迪烦事多第五季"><em
+                                    class="number ">5</em>明迪烦事多第五季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="童话镇第六季"><em
+                                    class="number ">6</em>童话镇第六季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="离婚第一季"><em
+                                    class="number ">7</em>离婚第一季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="鬼玩人第二季"><em
+                                    class="number ">8</em>鬼玩人第二季</a></li>
+                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
+                                                                                                     title="驱魔人第一季"><em
+                                    class="number ">9</em>驱魔人第一季</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hy-video-list side clearfix">
+                    <div class="head"><a class="pull-right text-muted" href="javascript:;">更多 <i
+                            class="icon iconfont icon-right"></i></a><h4>推荐专题</h4></div>
+                    <div class="item">
+                        <ul class="clearfix"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	    var swiper = new Swiper('.hy-slide', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        autoplay: 3000,
+	    });	    
+
+</script>
+<div class="tabbar visible-xs"><a href="Index.html" class="item active"><i class="icon iconfont icon-home"></i>
+    <p class="text">首页</p></a><a href="list/Index.html" class="item"><i class="icon iconfont icon-film"></i>
+    <p class="text">电影 </p></a><a href="list/Index1.html" class="item"><i class="icon iconfont icon-show"></i>
+    <p class="text">电视剧 </p></a><a href="list/Index2.html" class="item"><i class="icon iconfont icon-flag"></i>
+    <p class="text">综艺 </p></a><a href="list/Index3.html" class="item"><i class="icon iconfont icon-mallanimation"></i>
+    <p class="text">动漫 </p></a></div>
+<div class="container">
+    <div class="row">
+        <div class="hy-footer clearfix"><p class="margin-0 text-muted">Copyright © 2019 All Rights Reserved
+            <p>本站免费电影的所有内容都由网友提供，本站仅为网友提供信息的交流平台，所有电影版权归原权利人,仅供宽带测试之用，请勿将本网站免费电影用于商业用途，因此造成的任何责任与本站无关! </p></div>
+    </div>
+</div>
+<div class="hidden-xs"><a href="" id="back-to-top" title="Back to top">&uarr;&uarr;&uarr;</a></div>
+<script src="/static/js/20479577.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/js/front.js"></script>
+<script src="/static/js/rocket-loader.min.js"
+        data-cf-settings="45dd9a155bd035335b317728-|49" defer=""></script>
+</body>
+</html>

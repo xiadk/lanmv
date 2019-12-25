@@ -8,6 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta name="referrer" content="no-referrer" />
     <!--[if lt IE 9]>
     <script src="/static/images/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="/static/images/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -29,57 +30,7 @@
     <meta name="description" content="从前有座灵剑山电视版剧情:《从前有座灵剑山》（电视剧，腾讯动漫/阅文集团原生IP，2.9次元欢乐仙侠青春爽剧） 讲述了灵剑派..">
 </head>
 <body>
-<div class="hy-head-menu">
-    <div class="container">
-        <div class="row">
-            <div class="item">
-                <div class="logo hidden-sm hidden-xs"><a class="" href="../Index.html"><img
-                        src="/static/images/logos/06.png"></a></div>
-                <div class="logo visible-sm visible-xs" style="float: left;"><a class="visible-sm visible-xs"
-                                                                                href="../Index.html"
-                                                                                style="padding-top: 12px;padding-bottom: 20px;"><img
-                        src="/static/images/logos/min/06.png"></a></div>
-                <div class="search" style="width: auto;">
-                    <li style="margin-top:10px;float:right;">
-                        <form name="formsearch" id="formsearch" action='/search.php' method="post" autocomplete="off">
-                            <input class="form-control" placeholder="输入影片关键词..." name="searchword" type="text"
-                                   id="keyword" required=""><input type="submit" id="searchbutton" value=""
-                                                                   class="hide"><a style="margin-top:10px;"
-                                                                                   href="javascript:" class="btns"
-                                                                                   title="搜索"
-                                                                                   onclick="if (!window.__cfRLUnblockHandlers) return false; $('#formsearch').submit();"
-                                                                                   data-cf-modified-=""><i
-                                class="icon iconfont icon-search"></i></a></form>
-                    </li>
-
-
-                    <li onmouseout="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='none';"
-                        onmouseover="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='block';"
-                        class="btn btn-sm btn-default hidden-xs"
-                        style="margin-top:5px; height:35px;margin-right:10px;float:right;background-color:#FCFCFC;color:#666;border: none;"
-                        data-cf-modified-=""><img src="/static/pic/wxgzh_mini.png"
-                                                                           style="width:35px;height: 35px;"></li>
-                    <div id="hiss"
-                         style="position:absolute;right:0px;z-index:999;background-color:#FCFCFC;width:300px;overflow:hidden;border:1px solid #ccc;top:53px;display:none;left: 0px;"
-                         onmouseout="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='none';"
-                         onmouseover="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='block';"
-                         data-cf-modified-=""><img src="/static/pic/wxgzh01.png">
-
-
-                    </div>
-                </div>
-                <ul class="menulist hidden-xs">
-                    <li><a href="../Index.html">首页</a></li>
-                    <li><a href="../list/Index.html"> 电影</a></li>
-                    <li class="active"><a href="../list/Index1.html"> 电视剧</a></li>
-                    <li><a href="../list/Index2.html"> 综艺</a></li>
-                    <li><a href="../list/Index3.html"> 动漫</a></li>
-                    <li><a href="javascript:;" target="_blank" style="color: red;">奈菲影视电报群</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+<div th:replace="~{common/header::header}"></div><!--顶部公共 -->
 <div class="container">
     <div class="row">
         <div class="col-md-9 col-sm-12 hy-main-content">

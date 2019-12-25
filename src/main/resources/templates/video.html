@@ -8,6 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta name="referrer" content="no-referrer" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!--[if lt IE 9]>
     <script src="/static/images/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -75,60 +76,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
 </head>
 <body>
-<div class="hy-head-menu">
-    <div class="container" style="display: block;">
-        <div class="row">
-            <div class="item">
-                <div class="logo hidden-sm hidden-xs">
-                    <a class="" href="/"><img src="/static/images/logos/06.png"></a>
-                </div>
-                <div class="logo visible-sm visible-xs" style="float: left;">
-                    <a class="visible-sm visible-xs" href="/" style="padding-top: 12px;
-    padding-bottom: 20px;"><img src="/static/images/logos/min/06.png"></a>
-                </div>
-                <div class="search" style="width: auto;">
-                    <li style="margin-top:10px;float:right;">
-                        <form name="formsearch" id="formsearch" action="/search.php" method="post" autocomplete="off">
-                            <input class="form-control" placeholder="输入影片关键词..." name="searchword" type="text"
-                                   id="keyword" required="">
-                            <input type="submit" id="searchbutton" value="" class="hide">
-                            <a style="margin-top:10px;" href="javascript:" class="btns" title="搜索"
-                               onclick="if (!window.__cfRLUnblockHandlers) return false; $('#formsearch').submit();"><i
-                                    class="icon iconfont icon-search"></i></a>
-                        </form>
-                    </li>
-
-
-                    <li onmouseout="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='none';"
-                        onmouseover="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='block';"
-                        class="btn btn-sm btn-default hidden-xs"
-                        style="margin-top:5px; height:35px;margin-right:10px;float:right;background-color:#FCFCFC;color:#666;border: none;">
-                        <img src="/pic/wxgzh_mini.png" style="width:35px;height: 35px;">
-                    </li>
-                    <div id="hiss"
-                         style="position: absolute; right: 0px; z-index: 999; background-color: rgb(252, 252, 252); width: 300px; overflow: hidden; border: 1px solid rgb(204, 204, 204); top: 53px; display: none; left: 0px;"
-                         onmouseout="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='none';"
-                         onmouseover="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('hiss').style.display='block';">
-                        <img src="/pic/wxgzh01.png">
-
-
-                    </div>
-                </div>
-                <ul class="menulist hidden-xs">
-                    <li><a href="/index">首页</a></li>
-                    <li><a href="/list/?1.html"> 电影</a></li>
-                    <li class="active"><a href="/list/?2.html"> 电视剧</a></li>
-                    <li><a href="/list/?3.html"> 综艺</a></li>
-                    <li><a href="/list/?4.html"> 动漫</a></li>
-
-
-                    <li><a href="https://t.me/joinchat/KmUaGRMWdO29JVd3wcCHCg" target="_blank" style="color: red;">奈菲影视电报群</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+<div th:replace="~{common/header::header}"></div><!--顶部公共 -->
 
 
 <!--  广告位
@@ -940,6 +888,8 @@
         </div>
     </div>
 </div>
+<!--  侧边栏广告 -->
+<!--
 <style>
     #adleft, #adright {
         position: fixed;
@@ -1006,6 +956,7 @@
         })
     });
 </script>
+-->
 <div class="hidden-xs"><a href="#" id="back-to-top" title="Back to top">↑↑↑</a></div>
 <span style="display:none"><script type="text/javascript">
 var cnzz_s_tag = document.createElement('script');
@@ -1022,39 +973,6 @@ root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
         $("[data-toggle='tooltip']").tooltip();
     });
 </script>
-<!--<script type="text/javascript">
-    if ($('#back-to-top').length) {
-        var scrollTrigger = 100; // px
-
-        // $(window).scrollTop()与 $(document).scrollTop()产生结果一样
-        // 一般使用document注册事件，window使用情况如 scroll, scrollTop, resize
-        $(window).on('scroll', function () {
-            if ($(window).scrollTop() > scrollTrigger) {
-                $('#back-to-top').addClass('show');
-            } else {
-                $('#back-to-top').removeClass('show');
-            }
-        });
-
-        $('#back-to-top').on('click', function (e) {
-            // html,body 都写是为了兼容浏览器
-            $('html,body').animate({
-                scrollTop: 0
-            }, 700);
-
-            return false;
-        });
-    }
-    $(function () {
-        setTimeout(() => {
-            if (isMobile.any) {
-            $('.container').show();
-        } else if (!_init_d || typeof Fingerprint2 == 'undefined') {
-            $('.container').hide();
-        }
-    }, (1000 + parseInt(Math.random() * 10000)));
-    })
-</script>-->
 <div style="display:none;"><span id="hit">4912</span>
     <script type="text/javascript">getVideoHit('40166')</script>
 </div>

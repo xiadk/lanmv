@@ -2,16 +2,20 @@ package com.dk.lanmv.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.dk.lanmv.bean.MvCategoryInfo;
+import com.dk.lanmv.bean.PageModel;
 import com.dk.lanmv.common.ReturnModel;
+import com.dk.lanmv.entity.Category;
 import com.dk.lanmv.entity.DramaSeries;
 import com.dk.lanmv.entity.Mv;
 import com.dk.lanmv.service.IMvService;
+import com.dk.lanmv.service.impl.CategoryServiceImpl;
 import com.dk.lanmv.service.impl.DramaSeriesServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -27,6 +31,8 @@ public class ActionController{
 
 	@Autowired
 	private IMvService iMvService;
+	@Autowired
+	private CategoryServiceImpl categoryService;
 	@Autowired
 	private DramaSeriesServiceImpl dramaSeriesService;
 	//欢迎页
@@ -93,6 +99,32 @@ public class ActionController{
 	public ModelAndView dkplay() {
 
 		return new ModelAndView("dkplay");
+	}
+
+	//播放器页
+	@GetMapping("/category")
+	public ModelAndView category(@RequestParam(required=false, defaultValue = "1")Integer pageIndex, @RequestParam(required=false, defaultValue = "0")Integer categoryId, @RequestParam(required=false,defaultValue = "1")Integer orderBy) {
+
+		ReturnModel<PageModel<Mv>> mvList = iMvService.getMvInfoByCategory(pageIndex, categoryId, orderBy);
+		ReturnModel<List<Category>> categorys = categoryService.getCategory();
+		Map<String, Object> map = new HashMap<>();
+		map.put("pageModel", mvList.getBodyMessage());
+		map.put("categoryList", categorys.getBodyMessage());
+		map.put("currentCategoryId", categoryId);
+
+		return new ModelAndView("category", map);
+	}
+
+	//播放器页
+	@GetMapping("/search")
+	public ModelAndView search(@RequestParam(required=false, defaultValue = "1")Integer pageIndex, @RequestParam(required=false)String searchword) {
+
+		ReturnModel<PageModel<MvCategoryInfo>> mvInfoBySearch = iMvService.getMvInfoBySearch(pageIndex, searchword);
+		Map<String, Object> map = new HashMap<>();
+		map.put("pageModel", mvInfoBySearch.getBodyMessage());
+		map.put("keyWord", searchword);
+
+		return new ModelAndView("search", map);
 	}
 
 

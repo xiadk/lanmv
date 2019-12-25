@@ -17,4 +17,8 @@ public interface IMvService extends IService<Mv> {
     public ReturnModel getMvList(int categoryId);
 
     public ReturnModel getMvInfo(long mvId);
+
+    public ReturnModel getMvInfoBySearch(Integer pageIndex, String keyWord);
+
+    public ReturnModel getMvInfoByCategory(Integer pageIndex, Integer categoryId, Integer orderBy);
 }

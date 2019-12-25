@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="referrer" content="no-referrer" />
+    <!--[if lt IE 9]>
+    <script src="/static/images/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="/static/images/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link href="/static/images/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/font/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/color.css" rel="stylesheet" type="text/css">
+    <link href="/static/images/css/style.css" rel="stylesheet" type="text/css">
+    <script src="/static/images/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/images/js/bootstrap.min.js"></script>
+    <script type="text/javascript">var sitePath=''</script>
+    <script src="/static/js/common.js" type="text/javascript"></script>
+    <script src="/static/js/function.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/images/js/LazyLoad.js"></script>
+    <script type="text/javascript" src="/static/images/js/swiper.min.js"></script>
+    <script type="text/javascript " src="/static/images/js/history.js"></script>
+</head>
+<body class="apptop">
+<div th:replace="~{common/header::header}"></div><!--顶部公共 -->
+<div class="container">
+    <div class="row">
+        <div class="hy-cascade clearfix">
+            <div class="content-meun clearfix">
+                <!--<a class="head" href="javascript:;" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                    <span class="text">已选择：</span><span>综艺</span>
+                    <span>全部</span>
+                    <span>全部</span>
+                    <span>全部</span>
+                    <span>全部</span>
+                    <span class="hidden-xs">全部</span>
+                    <span class="hidden-xs">全部</span>
+                    <span class="hidden-xs">全部</span>
+                    <span class="hidden-xs">全部</span>
+                    <span class="hidden-xs">全部</span></a>-->
+                <div class="item collapse" id="collapse" aria-expanded="false">
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按分类：</span></li>
+                        <li><a href="javascript:;">全部</a></li>
+
+                        <li th:each="cate:${categoryList}"><a th:href="@{/category(pageIndex=1, categoryId=${cate.getCategoryId()})}" th:text="${cate.getCategoryName()}"></a></li>
+                    </ul>
+                   <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按剧情：</span></li>
+                        <li><a href="" class="active">全部</a></li>
+                        <li><a href="javascript:;">年代</a></li>
+                        <li><a href="javascript:;">悬疑</a></li>
+                        <li><a href="javascript:;">古装</a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按地区：</span></li>
+                        <li><a href="" class="active">全部</a></li>
+                        <li><a href="javascript:;">大陆</a></li>
+                        <li><a href="javascript:;">香港</a></li>
+                        <li><a href="javascript:;">台湾</a></li>
+                        <li><a href="javascript:;">日本</a></li>
+                        <li><a href="javascript:;">韩国</a></li>
+                        <li><a href="javascript:;">欧美</a></li>
+                        <li><a href="javascript:;">泰国</a></li>
+                        <li><a href="javascript:;">其他</a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按年份：</span></li>
+                        <li><a href="" class="active">全部</a></li>
+                        <li><a href="javascript:;">2019</a></li>
+                        <li><a href="javascript:;">2018</a></li>
+                        <li><a href="javascript:;">2017</a></li>
+                        <li><a href="javascript:;">2016</a></li>
+                        <li><a href="javascript:;">2015</a></li>
+                        <li><a href="javascript:;">2014</a></li>
+                        <li><a href="javascript:;">2013</a></li>
+                        <li><a href="javascript:;">2012</a></li>
+                        <li><a href="javascript:;">2011</a></li>
+                        <li><a href="javascript:;">2010</a></li>
+                        <li><a href="javascript:;">2009</a></li>
+                        <li><a href="javascript:;">更早</a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按语言：</span></li>
+                        <li><a class="active" target="_self" href="">全部</a></li>
+                        <li><a target="_self" href="javascript:;">国语</a></li>
+                        <li><a target="_self" href="javascript:;">粤语</a></li>
+                        <li><a target="_self" href="javascript:;">英语</a></li>
+                        <li><a target="_self" href="javascript:;">日语</a></li>
+                        <li><a target="_self" href="javascript:;">韩语</a></li>
+                        <li><a target="_self" href="javascript:;">泰语</a></li>
+                        <li><a target="_self" href="javascript:;">法语</a></li>
+                    </ul>
+                    <!--
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按状态：</span></li>
+                        <li><a href="" class="active" target="_self">全部</a></li>
+                        <li><a href="javascript:;" target="_self">完结</a></li>
+                        <li><a href="javascript:;" target="_self">连载中</a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按来源：</span></li>
+                        <li><a class="active" href="">全部</a></li>
+                        <li><a href="javascript:;">奈菲独家高清片源</a></li>
+                        <li><a href="javascript:;">kuyun</a></li>
+                        <li><a href="javascript:;">ckm3u8</a></li>
+                        <li><a href="javascript:;">33uu</a></li>
+                        <li><a href="javascript:;">33uuck</a></li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="text"><span class="text-muted">按字母：</span></li>
+                        <li><a class="active" href="">全部</a></li>
+                        <li><a href="javascript:;">A</a></li>
+                        <li><a href="javascript:;">B</a></li>
+                        <li><a href="javascript:;">C</a></li>
+                        <li><a href="javascript:;">D</a></li>
+                        <li><a href="javascript:;">E</a></li>
+                        <li><a href="javascript:;">F</a></li>
+                        <li><a href="javascript:;">G</a></li>
+                        <li><a href="javascript:;">H</a></li>
+                        <li><a href="javascript:;">I</a></li>
+                        <li><a href="javascript:;">J</a></li>
+                        <li><a href="javascript:;">K</a></li>
+                        <li><a href="javascript:;">L</a></li>
+                        <li><a href="javascript:;">M</a></li>
+                        <li><a href="javascript:;">N</a></li>
+                        <li><a href="javascript:;">O</a></li>
+                        <li><a href="javascript:;">P</a></li>
+                        <li><a href="javascript:;">Q</a></li>
+                        <li><a href="javascript:;">R</a></li>
+                        <li><a href="javascript:;">S</a></li>
+                        <li><a href="javascript:;">T</a></li>
+                        <li><a href="javascript:;">U</a></li>
+                        <li><a href="javascript:;">V</a></li>
+                        <li><a href="javascript:;">W</a></li>
+                        <li><a href="javascript:;">X</a></li>
+                        <li><a href="javascript:;">Y</a></li>
+                        <li><a href="javascript:;">Z</a></li>
+                        <li><a href="javascript:;">0-9</a></li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+        <div class="hy-layout clearfix" style="margin-top: 0;">
+            <div class="hy-switch-tabs active clearfix"><span class="text-muted pull-right hidden-xs">共有<span
+                    class="text-color" th:text="'“'+ ${pageModel.getTotalCount()}+'”'"></span>个影片,当前第<span class="text-color" th:text="'“'+ ${pageModel.getPageIndex()}+'”'"></span>页</span>
+                <ul class="nav nav-tabs">
+                    <li class=" active"><a href="javascript:;">按时间</a></li>
+                    <li class=""><a href="javascript:;">按人气</a></li>
+                    <li class=""><a href="javascript:;">按推荐</a></li>
+                </ul>
+            </div>
+            <div class="hy-video-list">
+                <div class="item">
+                    <ul class="clearfix">
+                        <li class="col-md-2 col-sm-3 col-xs-4" th:each="mvInfo:${pageModel.getPageDatas()}">
+                            <a class="videopic lazy" th:href="@{/detail(mvId=${mvInfo.getMvId()})}"
+                               th:attr="title=${mvInfo.getMvName()}, data-original=${mvInfo.getMvPicture()}"
+                                                                  style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
+                                class="play hidden-xs"></span></a>
+                            <div class="title"><h5 class="text-overflow"><a th:href="@{/detail(mvId=${mvInfo.getMvId()})}" th:text="${mvInfo.getMvName()}"></a></h5>
+                            </div>
+                            <!--<div class="subtitle text-muted text-overflow hidden-xs"><a href='javascript:;'>谢娜</a>&nbsp;<a
+                                    href='javascript:;'>..</a>&nbsp;
+                            </div>-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hy-page clearfix">
+                <ul class="cleafix">
+                    <li><a th:href="@{/category(pageIndex=1, categoryId=${currentCategoryId})}">首页</a></li>
+                    <li><a th:href="@{/category(pageIndex=${pageModel.getPageIndex()-1}, categoryId=${currentCategoryId})}">上一页</a></li>
+                    <li class="visible-xs"><span class="num">1/200</span></li>
+                    <span th:if="${pageModel.getPageIndex() != 1}">
+                            <span th:if="${pageModel.getPageIndex() > 4}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()-4,pageModel.getPageIndex()-1)}"><a th:href="@{/category(pageIndex=${firstIndex}, categoryId=${currentCategoryId})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() <= 4}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(1,pageModel.getPageIndex()-1)}"><a th:href="@{/category(pageIndex=${firstIndex}, categoryId=${currentCategoryId})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                        </span>
+
+
+                    <li class="hidden-xs active"><a th:href="@{/category(pageIndex=${pageModel.getPageIndex()}, categoryId=${currentCategoryId})}" th:text="${pageModel.getPageIndex()}"></a></li>
+
+                    <!-- 分页当前页后面部分 -->
+                    <span th:if="${pageModel.getPageIndex() != pageModel.getTotalPage()}">
+                            <span th:if="${pageModel.getPageIndex() < 4 && pageModel.getTotalPage() < 6}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,pageModel.getTotalPage())}"><a th:href="@{/category(pageIndex=${firstIndex}, categoryId=${currentCategoryId})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() < 4 && pageModel.getTotalPage() > 6}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,6)}"><a th:href="@{/category(pageIndex=${firstIndex},categoryId=${currentCategoryId})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() >= 4 && pageModel.getTotalPage()- pageModel.getPageIndex() > 2}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,pageModel.getPageIndex()+2)}"><a th:href="@{/category(pageIndex=${firstIndex}, categoryId=${currentCategoryId})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                            <span th:if="${pageModel.getPageIndex() >= 4 && pageModel.getTotalPage()- pageModel.getPageIndex() <= 2}">
+                            <li class="hidden-xs"  th:each="firstIndex:${#numbers.sequence(pageModel.getPageIndex()+1,pageModel.getTotalPage())}"><a th:href="@{/category(pageIndex=${firstIndex}, categoryId=${currentCategoryId})}" th:text="${firstIndex}"></a></li>
+                            </span>
+                        </span>
+
+                    <li><a th:href="@{/search(pageIndex=${pageModel.getPageIndex()+1},categoryId=${currentCategoryId})}">下一页</a></li>
+                    <li><a th:href="@{/search(pageIndex=${pageModel.getTotalPage()},categoryId=${currentCategoryId})}">尾页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="cfd6dfe15264433674678861-text/javascript">
+    var w = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+    if (w > 640) {
+        $(".collapse").addClass("in");
+		 }else{
+        $(".content-meun").css("min-height","100%");
+    }
+
+</script>
+<div class="tabbar visible-xs"><a href="Index.html" class="item active"><i class="icon iconfont icon-home"></i>
+    <p class="text">首页</p></a><a href="list/Index.html" class="item"><i class="icon iconfont icon-film"></i>
+    <p class="text">电影 </p></a><a href="list/Index1.html" class="item"><i class="icon iconfont icon-show"></i>
+    <p class="text">电视剧 </p></a><a href="list/Index2.html" class="item"><i class="icon iconfont icon-flag"></i>
+    <p class="text">综艺 </p></a><a href="list/Index3.html" class="item"><i class="icon iconfont icon-mallanimation"></i>
+    <p class="text">动漫 </p></a></div>
+<div class="container">
+    <div class="row">
+        <div class="hy-footer clearfix"><p class="margin-0 text-muted">Copyright © 2019 All Rights Reserved
+            <p>本站免费电影的所有内容都由网友提供，本站仅为网友提供信息的交流平台，所有电影版权归原权利人,仅供宽带测试之用，请勿将本网站免费电影用于商业用途，因此造成的任何责任与本站无关! </p></div>
+    </div>
+</div>
+<div class="hidden-xs"><a href="" id="back-to-top" title="Back to top">&uarr;&uarr;&uarr;</a></div>
+<span style="display:none"><script type="cfd6dfe15264433674678861-text/javascript">
+var cnzz_s_tag = document.createElement('script');
+cnzz_s_tag.type = 'text/javascript';
+cnzz_s_tag.async = true;
+cnzz_s_tag.charset = 'utf-8';
+cnzz_s_tag.src = 'https://w.cnzz.com/c.php?id=1277238851&async=1';
+var root_s = document.getElementsByTagName('script')[0];
+root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+</script></span>
+<script type="cfd6dfe15264433674678861-text/javascript" charset="utf-8">
+    $(function () {
+        $(".videopic.lazy").lazyload({effect: "fadeIn"});
+        $("[data-toggle='tooltip']").tooltip();
+    });
+
+</script>
+<script type="cfd6dfe15264433674678861-text/javascript">
+    if ($('#back-to-top').length) {
+        var scrollTrigger = 100; // px
+
+        // $(window).scrollTop()与 $(document).scrollTop()产生结果一样
+        // 一般使用document注册事件，window使用情况如 scroll, scrollTop, resize
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        });
+
+        $('#back-to-top').on('click', function (e) {
+            // html,body 都写是为了兼容浏览器
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+
+            return false;
+        });
+    }
+
+
+</script>
+<script src="/static/js/20479577.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/js/front.js"></script>
+<script src="/static/js/rocket-loader.min.js" data-cf-settings="cfd6dfe15264433674678861-|49" defer=""></script>
+</body>
+</html>
