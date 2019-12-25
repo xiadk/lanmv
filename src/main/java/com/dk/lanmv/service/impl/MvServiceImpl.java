@@ -14,7 +14,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -31,14 +34,27 @@ public class MvServiceImpl extends ServiceImpl<MvMapper, Mv> implements IMvServi
     private CategoryServiceImpl categoryService;
     @Autowired
     private MvMapper mvMapper;
+
+    public static void main(String[] args) {
+        System.out.println(new Random().nextInt(10));
+    }
     @Override
     public ReturnModel getMvList(int categoryId) {
         ReturnModel returnModel = new ReturnModel();
 
-        QueryWrapper<Mv> queryWrapper = new QueryWrapper();
-        queryWrapper.eq("category_id", categoryId);
-        Page<Mv> mvPage = new Page<>(1, 12);
+        int pageSize = 12;
+        Mv oneLastMvInfo = mvMapper.getOneLastMvInfo();
+        long lastMvId = oneLastMvInfo.getMvId();
+        Random random = new Random();
+        int mvId = random.nextInt((int) lastMvId - pageSize);
+        QueryWrapper<Mv> queryWrapper = new QueryWrapper<>();
+        if (categoryId != 0){
+            queryWrapper.eq("category_id", categoryId);
+        }
+        queryWrapper.gt("mv_id", mvId);
+        Page<Mv> mvPage = new Page<>(1, pageSize);
         List<Mv> mvs = page(mvPage, queryWrapper).getRecords();
+        Collections.shuffle(mvs);
 
         returnModel.setBodyMessage(mvs);
         return returnModel;

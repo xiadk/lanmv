@@ -45,9 +45,27 @@ public class ActionController{
 	@GetMapping("/index")
 	public ModelAndView index() {
 
-		ReturnModel<List<Mv>> mvList = iMvService.getMvList(1);
+		ReturnModel<List<Mv>> mvList = iMvService.getMvList(0);
 		Map<String, List<Mv>> map = new HashMap<>();
 		map.put("inv", mvList.getBodyMessage());
+
+		//电影
+		ReturnModel<List<Mv>> movies = iMvService.getMvList(2);
+		map.put("movies", movies.getBodyMessage());
+
+		//电视剧
+		ReturnModel<List<Mv>> series = iMvService.getMvList(3);
+		map.put("series", series.getBodyMessage());
+
+		//综艺
+		ReturnModel<List<Mv>> variety = iMvService.getMvList(4);
+		map.put("variety", variety.getBodyMessage());
+
+		//动漫
+		ReturnModel<List<Mv>> anime = iMvService.getMvList(1);
+		map.put("anime", anime.getBodyMessage());
+
+
 		return new ModelAndView("index",map);
 	}
 

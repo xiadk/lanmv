@@ -26,4 +26,7 @@ public interface MvMapper extends BaseMapper<Mv> {
     @Select("select * from t_mv as tm left join t_category as tc on tm.category_id = tc.category_id where tm.mv_name like concat('%',#{keyWord},'%') limit #{offset}, #{pageSize}")
     List<MvCategoryInfo> getMvInfoBySearch( @Param("pageSize")int pageSize, @Param("offset")int offset, @Param("keyWord")String keyWord);
 
+    @Select("select * from t_mv  order by mv_id desc limit 1")
+    Mv getOneLastMvInfo();
+
 }
