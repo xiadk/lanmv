@@ -11,6 +11,7 @@ import com.dk.lanmv.mapper.MvMapper;
 import com.dk.lanmv.service.impl.DramaSeriesServiceImpl;
 import com.dk.lanmv.service.utils.HttpUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -92,9 +93,12 @@ public class nfmovice {
         List<Mv> mvs = mvMapper.selectList(queryWrapper);
         Map<String, String> existMvOrigin = mvs.stream().collect(Collectors.toMap(Mv::getMvOrigin, Mv::getMvOrigin, (key1, key2)->key1));
 
-        for (int page = 45; page <= 300; page++){
+        for (int page = 66; page <= 300; page++){
             String searchUrl = "https://www.nfmovies.com/search.php?page="+page+"&searchtype=5&order=time&player=ckm3u8";
             String search = httpUtil.doGet(searchUrl);
+            if (StringUtils.isBlank(search)){
+                continue;
+            }
             Document searchParse = Jsoup.parse(search);
             Element searchElement = searchParse.getElementsByClass("hy-video-list").get(0);
             List<String> hrefList = searchElement.getElementsByTag("a").stream().filter(el-> el.hasClass("videopic lazy")).map(ele -> ele.attr("href")).collect(Collectors.toList());
@@ -111,6 +115,9 @@ public class nfmovice {
                 }
 
                 String detail = httpUtil.doGet(deltailUrl);
+                if (StringUtils.isBlank(search)){
+                    continue;
+                }
                 Document detailParse = Jsoup.parse(detail);
                 mv.setMvOrigin(deltailUrl);
                 //名称

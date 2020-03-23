@@ -30,5 +30,5 @@ spring:
       additional-paths: resources/**,static/**,templates/**
 mybatis-plus:
   mapper-locations: classpath*:com/dk/easya/mapper/xml/*.xml #配置xml配置文件路径
-  #configuration:
-    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
