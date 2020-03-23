@@ -51,10 +51,8 @@
             <div class="clearfix list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                 <div class="hy-video-list cleafix">
                     <div class="item">
-
                         <!-- 懒懒独家样式-->
-
-                        <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${inv}">
+                        <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${comicLists}">
                             <a class="videopic lazy"
                                th:href="@{~/detail(mvId=${mv.getMvId()})}"
                                th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
@@ -67,164 +65,18 @@
                                     <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                 </h5>
                             </div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="hy-video-footer visible-xs clearfix"><a href="search-5_time_E5A588E88FB2E78BAC.html"
-                                                                class="text-muted" title="查看更多">查看更多 <i
-                    class="icon iconfont icon-right pull-right"></i></a></div>
-        </div>
-        <div class="hy-layout clearfix">
-            <div class="hy-video-head"><h3 class="margin-0"><i class="icon iconfont icon-update text-color"></i> 最近热播
-            </h3>
-                <ul class="pull-right">
-                    <li class="active"><a href="search-5_hit.html" class="text-muted" title="更多">更多 <i
-                            class="icon iconfont icon-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="clearfix list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
-                <div class="hy-video-list cleafix">
-                    <div class="item">
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index24.html"
-                                                                    title="小丑2019"
-                                                                    data-original="/static/uploads/allimg/191007/9d7c3008e4fd741b.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HD特效遮韩文硬字幕</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index24.html" title="小丑2019">小丑2019</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                杰昆·菲尼克斯,罗伯特·德尼罗,莎姬·贝兹,布莱恩·考伦
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index25.html"
-                                                                    title="海贼王"
-                                                                    data-original="/static/uploads/allimg/190419/29abf17ce277a132.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至910集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index25.html"
-                                                                            title="海贼王">海贼王</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">田中真弓,冈村明美,中井和哉,平田广明
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index26.html"
-                                                                    title="致命女人"
-                                                                    data-original="/static/uploads/allimg/190819/856e75842a4c151e.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index26.html"
-                                                                            title="致命女人">致命女人</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">刘玉玲,金妮弗·古德温,
-                                瑞德·斯科特,山姆·贾格,亚历珊德拉·达达里奥,柯尔比·豪威尔-巴普蒂斯特,赛迪·卡尔瓦诺,杰克·达文波特,里奥·霍华德,艾丽莎
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index27.html"
-                                                                    title="斗罗大陆第1季"
-                                                                    data-original="/static/uploads/allimg/190419/d303ea3dac8a2813.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至78集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index27.html" title="斗罗大陆第1季">斗罗大陆第1季</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">沈磊,翟巍,吴磊,陶典</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index28.html"
-                                                                    title="速度与激情：特别行动"
-                                                                    data-original="/static/uploads/allimg/190819/3b7c10d6c20df518.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index28.html"
-                                                                            title="速度与激情：特别行动">速度与激情：特别行动</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                道恩·强森,杰森·斯坦森,伊德里斯·艾尔巴,艾莎·冈萨雷斯,凡妮莎·柯比,埃迪·马森,罗曼·雷恩斯,斯蒂芬妮·沃格特,维克托里娅·菲斯,康兰·卡萨尔,海伦
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index29.html"
-                                                                    title="流浪者/浪客行"
-                                                                    data-original="/static/uploads/allimg/190921/0719a09d83abfe16.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至14集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index29.html" title="流浪者/浪客行">流浪者/浪客行</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                李昇基,裴秀智,申成禄,郑满植,金民钟,白润植,李璟荣,文成根
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index30.html" title="少年的你"
-                                                                             data-original="/static/uploads/allimg/191026/f96a0ffe0c05217d.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HC</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index30.html"
-                                                                            title="少年的你">少年的你</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">周冬雨,易烊千玺,尹昉,黄觉</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index31.html" title="银河补习班"
-                                                                             data-original="/static/uploads/allimg/190717/0fbf470d7c8ad368.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">BD</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index31.html" title="银河补习班">银河补习班</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">邓超,白宇,任素汐,王西</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index32.html" title="在远方"
-                                                                             data-original="/static/uploads/allimg/190923/abb6ba290a75ce0f.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index32.html"
-                                                                            title="在远方">在远方</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">刘烨,马伊琍,梅婷,保剑锋,曾黎,程煜,郑奇
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index33.html" title="小丑回魂2"
-                                                                             data-original="/static/uploads/allimg/190930/2ed22e150f68a514.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index33.html" title="小丑回魂2">小丑回魂2</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">詹姆斯麦卡沃伊 / 杰西卡查斯坦 /
-                                比尔斯卡斯加德 / 比尔哈德尔 / 索菲娅莉莉丝 / 杰克迪伦格雷泽 / 菲恩伍法德 / 杰登马泰尔 / 特洛伊詹姆斯 / 哈维尔博
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index34.html" title="灵笼"
-                                                                             data-original="/static/uploads/allimg/190713/fb45360e385d9fad.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至6集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index34.html" title="灵笼">灵笼</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">黄莺,李元韬,陶典,程玉珠,夏一可</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index35.html" title="新石纪"
-                                                                             data-original="/static/uploads/allimg/190702/851d349f4f0ad362.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至20集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index35.html"
-                                                                            title="新石纪">新石纪</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                小林裕介,古川慎,市之濑加那,中村悠一,佐藤元,沼仓爱美,前野智昭,村濑步,高桥花林,上田丽奈,河西健吾,麦人
-                            </div>
+                            <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="hy-video-footer visible-xs clearfix"><a href="search-5_hit.html" class="text-muted"
-                                                                title="查看更多">查看更多 <i
-                    class="icon iconfont icon-right pull-right"></i></a></div>
+            <div class="hy-video-footer visible-xs clearfix">
+                <a href="search-5_time_E5A588E88FB2E78BAC.html" class="text-muted" title="查看更多">查看更多 <i class="icon iconfont icon-right pull-right"></i></a></div>
         </div>
         <div class="hy-layout clearfix">
             <div class="hy-video-head">
                 <ul class="pull-right">
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index4.html"
+                    <!--<li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index4.html"
                                                                             class="text-muted border-right">动作片</a> /
                     </li>
                     <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index5.html"
@@ -247,7 +99,7 @@
                     </li>
                     <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index11.html"
                                                                             class="text-muted border-right">剧情片</a> /
-                    </li>
+                    </li>-->
                     <li class="active"><a href="list/Index.html" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
@@ -255,149 +107,22 @@
             <div class="clearfix">
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index24.html"
-                                                                                 title="小丑2019"
-                                                                                 data-original="/static/uploads/allimg/191007/9d7c3008e4fd741b.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD特效遮韩文硬字幕</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index24.html"
-                                                                                title="小丑2019">小丑2019</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    杰昆·菲尼克斯,罗伯特·德尼罗,莎姬·贝兹,布莱恩·考伦
+                        <div class="item">
+                            <!-- 电影-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${moviceLists}">
+                                <a class="videopic lazy"
+                                   th:href="@{~/detail(mvId=${mv.getMvId()})}"
+                                   th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
+                                   style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                    <span class="play hidden-xs"></span>
+                                    <span class="note textbg">更新至20集</span>
+                                </a>
+                                <div class="title">
+                                    <h5 class="text-overflow">
+                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                    </h5>
                                 </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index36.html"
-                                                                                 title="复仇者联盟4：终局之战/复联4"
-                                                                                 data-original="/static/uploads/allimg/201904/51728ed46f190c2d.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD特效高清</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index36.html"
-                                                                                title="复仇者联盟4：终局之战/复联4">复仇者联盟4：终局之战/复联4</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">布丽·拉尔森 / 小罗伯特·唐尼 /
-                                    克里斯·海姆斯沃斯 / 斯嘉丽·约翰逊 / 乔什·布洛林 / 克里斯·埃文斯 / 布莱德利·库珀 / 凯伦·吉兰 / 伊万杰琳·莉莉 /
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index37.html" title="惊奇队长"
-                                                                                 data-original="/static/uploads/allimg/190422/201903081552024967.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index37.html" title="惊奇队长">惊奇队长</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    布丽·拉尔森,裘德·洛,安妮特·贝宁,嘉玛·陈,塞缪尔·杰克逊,本·门德尔森,李·佩斯,克拉克·格雷格,杰曼·翰苏,麦肯娜·格瑞丝,Algenis,Rune
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index38.html"
-                                                                                 title="蜘蛛侠：英雄远征"
-                                                                                 data-original="/static/uploads/allimg/190701/ad5baed1d7fc2cf4.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD中英高清</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index38.html"
-                                                                                title="蜘蛛侠：英雄远征">蜘蛛侠：英雄远征</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    汤姆·赫兰德,赞达亚,杰克·吉伦哈尔,寇碧·史莫德斯,塞缪尔·杰克逊,乔恩·费儒,玛丽莎·托梅,雅各布·巴特朗,安格瑞·赖斯,马丁·斯塔尔,瑞米·海依,纽曼
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index39.html" title="寄生虫"
-                                                                                 data-original="/static/uploads/allimg/190819/59728b588b0b1f61.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index39.html" title="寄生虫">寄生虫</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">宋康昊 / 李善均 / 赵汝贞 /
-                                    崔宇植 / 朴素丹
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index40.html"
-                                                                                 title="扫毒2：天地对决"
-                                                                                 data-original="/static/uploads/allimg/190706/ed2ce4f91f9e55f1.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD国语</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index40.html"
-                                                                                title="扫毒2：天地对决">扫毒2：天地对决</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">刘德华,古天乐,苗侨伟,林嘉欣
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index41.html"
-                                                                                          title="哥斯拉2：怪兽之王"
-                                                                                          data-original="/static/uploads/allimg/201906/46a0ec9dc9fc1ec4.png"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index41.html"
-                                                                                title="哥斯拉2：怪兽之王">哥斯拉2：怪兽之王</a></h5>
-                                </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">迈克尔·道赫蒂 / 扎克·希尔兹 /
-                                    麦克思·鲍伦斯坦 主演: 凯尔·钱德勒 / 维拉·法米加 / 米莉·波比·布朗 / 章子怡 / 渡边谦 / 布莱德利·惠特福德 / 托马斯
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index28.html"
-                                                                                          title="速度与激情：特别行动"
-                                                                                          data-original="/static/uploads/allimg/190819/3b7c10d6c20df518.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index28.html"
-                                                                                title="速度与激情：特别行动">速度与激情：特别行动</a></h5>
-                                </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    道恩·强森,杰森·斯坦森,伊德里斯·艾尔巴,艾莎·冈萨雷斯,凡妮莎·柯比,埃迪·马森,罗曼·雷恩斯,斯蒂芬妮·沃格特,维克托里娅·菲斯,康兰·卡萨尔,海伦
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index42.html"
-                                                                                          title="中国机长"
-                                                                                          data-original="/static/uploads/allimg/191001/6a23bd2c65a44f4a.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HC</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index42.html" title="中国机长">中国机长</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    张涵予,欧豪,杜江,袁泉,张天爱,李沁,雅玫,杨祺如,高戈,黄志忠,朱亚文,李现,杨颖,陈数,焦俊艳,吴樾,阚清子,余皑磊,刘浩,李岷城,冯文娟
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index43.html"
-                                                                                          title="恶人传"
-                                                                                          data-original="/static/uploads/allimg/190819/11339f9bfdeb8f68.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index43.html" title="恶人传">恶人传</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">马东锡 / 金武烈 / 金成圭
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index44.html"
-                                                                                          title="黑衣人：全球追缉"
-                                                                                          data-original="/static/uploads/allimg/201908/3e13d95b1a397c57.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD国英双语</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index44.html"
-                                                                                title="黑衣人：全球追缉">黑衣人：全球追缉</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">克里斯·海姆斯沃斯 / 泰莎·汤普森 /
-                                    丽贝卡·弗格森 / 库梅尔·南贾尼 / 拉菲·斯波 / 艾玛·汤普森 / 连姆·尼森 / 戴维娜·西塔拉姆 / 纳西尔·贾玛 / 维克
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index45.html"
-                                                                                          title="阿丽塔：战斗天使"
-                                                                                          data-original="/static/uploads/allimg/190419/ef319265c8e2e483.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">BD超清</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index45.html"
-                                                                                title="阿丽塔：战斗天使">阿丽塔：战斗天使</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    罗莎·萨拉查,克里斯托弗·沃尔兹,基恩·约翰逊,艾德·斯克林
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
                         </div>
                     </div>
@@ -409,18 +134,6 @@
         <div class="hy-layout clearfix">
             <div class="hy-video-head">
                 <ul class="pull-right">
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index12.html"
-                                                                            class="text-muted border-right">大陆剧</a> /
-                    </li>
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index13.html"
-                                                                            class="text-muted border-right">港台剧</a> /
-                    </li>
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index14.html"
-                                                                            class="text-muted border-right">欧美剧</a> /
-                    </li>
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index15.html"
-                                                                            class="text-muted border-right">日韩剧</a> /
-                    </li>
                     <li class="active"><a href="list/Index1.html" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
@@ -428,147 +141,22 @@
             <div class="clearfix">
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index46.html"
-                                                                                 title="亲爱的热爱的"
-                                                                                 data-original="/static/uploads/allimg/190709/713a6cd7c697d13f.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="score">3.0</span><span
-                                    class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index46.html"
-                                                                                title="亲爱的热爱的">亲爱的热爱的</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    杨紫,李现,胡一天,李鸿其,王真儿,李泽锋,姜珮瑶,王乐君
+                        <div class="item">
+                            <!-- 电影-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${tvLists}">
+                                <a class="videopic lazy"
+                                   th:href="@{~/detail(mvId=${mv.getMvId()})}"
+                                   th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
+                                   style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                    <span class="play hidden-xs"></span>
+                                    <span class="note textbg">更新至20集</span>
+                                </a>
+                                <div class="title">
+                                    <h5 class="text-overflow">
+                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                    </h5>
                                 </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index47.html"
-                                                                                 title="长安十二时辰"
-                                                                                 data-original="/static/uploads/allimg/190627/88a5be07bfdef37f.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index47.html"
-                                                                                title="长安十二时辰">长安十二时辰</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">易烊千玺 / 雷佳音 / 周一围 /
-                                    杰曼·翰苏 / 韩童生
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index48.html"
-                                                                                 title="全裸导演/AV帝王/全裸监督"
-                                                                                 data-original="/static/uploads/allimg/190819/7c014786a50f8b1f.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">国日双语（完结）</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index48.html"
-                                                                                title="全裸导演/AV帝王/全裸监督">全裸导演/AV帝王/全裸监督</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    山田孝之,满岛真之介,玉山铁二,柄本时生,伊藤沙莉,富手麻妙,后藤刚范,吉田钢太郎,板尾创路,余贵美子,小雪,中川雅也,国村隼,石桥凌
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index49.html" title="陈情令"
-                                                                                 data-original="/static/uploads/allimg/190709/674a73b1d54345ff.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index49.html" title="陈情令">陈情令</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">肖战 / 王一博 / 孟子义 / 宣璐
-                                    / 李若彤
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index50.html" title="轮到你了"
-                                                                                 data-original="/static/uploads/allimg/190419/12439bdd7bc9f624.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index50.html" title="轮到你了">轮到你了</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    原田知世,田中圭,西野七濑,浅香航大,奈绪,山田真步,三仓佳奈,大友花恋,金泽美穗,坪仓由幸,中尾畅树,小池亮介,井阪郁巳,荒木飞羽,袴田吉彦,片桐仁,真飞
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index26.html" title="致命女人"
-                                                                                 data-original="/static/uploads/allimg/190819/856e75842a4c151e.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index26.html" title="致命女人">致命女人</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">刘玉玲,金妮弗·古德温,
-                                    瑞德·斯科特,山姆·贾格,亚历珊德拉·达达里奥,柯尔比·豪威尔-巴普蒂斯特,赛迪·卡尔瓦诺,杰克·达文波特,里奥·霍华德,艾丽莎
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index51.html"
-                                                                                          title="月之酒店/德鲁纳酒店"
-                                                                                          data-original="/static/uploads/allimg/201907/ff52c74fced90c54.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index51.html"
-                                                                                title="月之酒店/德鲁纳酒店">月之酒店/德鲁纳酒店</a></h5>
-                                </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">李知恩 / 吕珍九</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index52.html"
-                                                                                          title="沼泽怪物 第一季"
-                                                                                          data-original="/static/uploads/allimg/190602/bfb66128112b3963.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index52.html"
-                                                                                title="沼泽怪物 第一季">沼泽怪物 第一季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    克里斯塔尔·里德,安迪·比恩,詹妮弗·比尔斯,维吉妮娅·马德森,威尔·帕顿,杰瑞尔·普雷斯科特,伊恩·齐林,莱昂纳多·吴
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index53.html"
-                                                                                          title="全职高手电视剧版"
-                                                                                          data-original="/static/uploads/allimg/201907/11b7b7fc6cdd99b4.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至40集</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index53.html"
-                                                                                title="全职高手电视剧版">全职高手电视剧版</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">杨洋 / 江疏影 / 赖雨濛 / 梁森
-                                    / 李沐宸 / 更多...
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index54.html"
-                                                                                          title="黑镜第五季"
-                                                                                          data-original="/static/uploads/allimg/201906/6709927f69672f5d.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index54.html"
-                                                                                title="黑镜第五季">黑镜第五季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">安德鲁·斯科特 / 麦莉·赛勒斯 /
-                                    安东尼·麦凯 / 叶海亚·阿卜杜勒-迈丁 / 托弗·戈瑞斯 / 更多...
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index55.html"
-                                                                                          title="小欢喜"
-                                                                                          data-original="/static/uploads/allimg/190819/57e517f8b70be40c.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index55.html" title="小欢喜">小欢喜</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    黄磊,海清,陶虹,王砚辉,咏梅,周奇,李庚希,郭子凡,刘奇,吴施乐,徐梵溪,王栎鑫,沙溢,任重
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index56.html"
-                                                                                          title="阿斯达年代记"
-                                                                                          data-original="/static/uploads/allimg/190529/39933569d7d629e3.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至17集</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index56.html"
-                                                                                title="阿斯达年代记">阿斯达年代记</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">宋仲基,张东健,金智媛,金玉彬
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
                         </div>
                     </div>
@@ -595,138 +183,22 @@
                 </div>
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index57.html"
-                                                                                 title="早餐中国第一季"
-                                                                                 data-original="/static/uploads/allimg/190422/c683a85434354bfc.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index57.html"
-                                                                                title="早餐中国第一季">早餐中国第一季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">沈宏非、陈晓卿</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index58.html"
-                                                                                 title="向往的生活第3季升级版"
-                                                                                 data-original="/static/uploads/allimg/190426/c6de27b5a7ca4931.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20190719</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index58.html"
-                                                                                title="向往的生活第3季升级版">向往的生活第3季升级版</a></h5>
+                        <div class="item">
+                            <!-- 综艺-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${varietyLists}">
+                                <a class="videopic lazy"
+                                   th:href="@{~/detail(mvId=${mv.getMvId()})}"
+                                   th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
+                                   style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                    <span class="play hidden-xs"></span>
+                                    <span class="note textbg">更新至20集</span>
+                                </a>
+                                <div class="title">
+                                    <h5 class="text-overflow">
+                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                    </h5>
                                 </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">黄磊 / 何炅 / 彭昱畅 /
-                                    张子枫
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index59.html"
-                                                                                 title="圆桌派第四季"
-                                                                                 data-original="/static/uploads/allimg/190620/25bf43300930408c.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20190923</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index59.html"
-                                                                                title="圆桌派第四季">圆桌派第四季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">窦文涛</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index60.html"
-                                                                                 title="极限挑战第二季"
-                                                                                 data-original="/static/uploads/allimg/190419/560aa1273325e572.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index60.html"
-                                                                                title="极限挑战第二季">极限挑战第二季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">黄渤,孙红雷,黄磊,罗志祥</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index61.html"
-                                                                                 title="明星大侦探第五季"
-                                                                                 data-original="/static/uploads/allimg/191102/c6bfd0ef3e5a51cf.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20191115</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index61.html"
-                                                                                title="明星大侦探第五季">明星大侦探第五季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    何炅,撒贝宁,白敬亭,王鸥,吴映洁,大张伟,张若昀,井柏然,Papi酱,魏晨
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index62.html"
-                                                                                 title="中餐厅第三季"
-                                                                                 data-original="/static/uploads/allimg/190727/5b6566b5bdf4f870.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20191018</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index62.html"
-                                                                                title="中餐厅第三季">中餐厅第三季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    赵薇,黄晓明,王俊凯,杨紫,秦海璐,林述巍
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index63.html"
-                                                                                          title="快乐大本营"
-                                                                                          data-original="/static/uploads/allimg/190419/51432eb7cbb1faa3.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20191116</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index63.html"
-                                                                                title="快乐大本营">快乐大本营</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">何炅,吴昕,杜海涛,谢娜</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index64.html"
-                                                                                          title="中国好声音2019"
-                                                                                          data-original="/static/uploads/allimg/201907/f99fcf4fd6d4dbba.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index64.html"
-                                                                                title="中国好声音2019">中国好声音2019</a></h5>
-                                </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">那英 / 王力宏 / 庾澄庆 /
-                                    李荣浩
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index65.html"
-                                                                                          title="脱口秀大会第二季"
-                                                                                          data-original="/static/uploads/allimg/190722/c3425dfa40633be3.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20190922</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index65.html"
-                                                                                title="脱口秀大会第二季">脱口秀大会第二季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">于谦,李诞,吴昕</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index66.html"
-                                                                                          title="向往的生活第3季"
-                                                                                          data-original="/static/uploads/allimg/190426/375837e3e07c8cba.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至20190719</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index66.html"
-                                                                                title="向往的生活第3季">向往的生活第3季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">黄磊 / 何炅 / 彭昱畅 /
-                                    张子枫
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index67.html"
-                                                                                          title="向往的生活第一季"
-                                                                                          data-original="/static/uploads/allimg/190419/30feefbf678b4fd3.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index67.html"
-                                                                                title="向往的生活第一季">向往的生活第一季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">何炅,黄磊,刘宪华</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index68.html"
-                                                                                          title="明星大侦探第四季"
-                                                                                          data-original="/static/uploads/allimg/190419/4efd26d457601388.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">20190125期</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index68.html"
-                                                                                title="明星大侦探第四季">明星大侦探第四季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">何炅,撒贝宁,白敬亭,吴映洁</div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
                         </div>
                     </div>
@@ -756,139 +228,22 @@
                 </div>
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index69.html"
-                                                                                 title="哪吒之魔童降世"
-                                                                                 data-original="/static/uploads/allimg/190819/c475dfa5b189ac6b.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index69.html"
-                                                                                title="哪吒之魔童降世">哪吒之魔童降世</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">内详</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index25.html" title="海贼王"
-                                                                                 data-original="/static/uploads/allimg/190419/29abf17ce277a132.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至910集</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index25.html" title="海贼王">海贼王</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    田中真弓,冈村明美,中井和哉,平田广明
+                        <div class="item">
+                            <!-- 动漫-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${comicLists}">
+                                <a class="videopic lazy"
+                                   th:href="@{~/detail(mvId=${mv.getMvId()})}"
+                                   th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
+                                   style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;">
+                                    <span class="play hidden-xs"></span>
+                                    <span class="note textbg">更新至20集</span>
+                                </a>
+                                <div class="title">
+                                    <h5 class="text-overflow">
+                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                    </h5>
                                 </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index70.html"
-                                                                                 title="大侦探皮卡丘"
-                                                                                 data-original="/static/uploads/allimg/190513/afe35e8efacf29eb.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index70.html"
-                                                                                title="大侦探皮卡丘">大侦探皮卡丘</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    瑞恩·雷诺兹,贾斯蒂斯·史密斯,凯瑟琳·纽顿,克里斯·吉尔,比尔·奈伊,渡边谦,瑞塔·奥拉,苏琪·沃特豪斯,卡兰·索尼,普莉安卡·伯福德,乔丹·朗,贝恩·科
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index71.html"
-                                                                                 title="一拳超人第二季"
-                                                                                 data-original="/static/uploads/allimg/190419/27b36ccfad0029ca.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index71.html"
-                                                                                title="一拳超人第二季">一拳超人第二季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    古川慎,石川界人,梶裕贵,悠木碧,山路和弘,津田健次郎,高山南,玄田哲章,安元洋贵,樱井孝宏,上田燿司,浪川大辅,日野聪,上田祐司,鸟海浩辅,小西克幸,羽多
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index27.html"
-                                                                                 title="斗罗大陆第1季"
-                                                                                 data-original="/static/uploads/allimg/190419/d303ea3dac8a2813.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">更新至78集</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index27.html"
-                                                                                title="斗罗大陆第1季">斗罗大陆第1季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">沈磊,翟巍,吴磊,陶典</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 "><a class="videopic lazy"
-                                                                                 href="detail/Index72.html" title="鬼灭之刃"
-                                                                                 data-original="/static/uploads/allimg/190419/46472d8d2b140e1d.jpg"
-                                                                                 style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index72.html" title="鬼灭之刃">鬼灭之刃</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    花江夏树,鬼头明里,下野纮,松冈祯丞,樱井孝宏,大塚芳忠,梶裕贵,加隈亚衣,冈本信彦,森川智之,悠木碧,井泽诗织,浪川大辅,山崎巧,绿川光,子安武人
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index73.html"
-                                                                                          title="进击的巨人第三季 Part.2"
-                                                                                          data-original="/static/uploads/allimg/190430/a7ea152ceb5a9108.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index73.html"
-                                                                                title="进击的巨人第三季 Part.2">进击的巨人第三季
-                                    Part.2</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                    梶裕贵,石川由依,井上麻里奈,神谷浩史,小野大辅,下野纮,小林优,三上枝织,谷山纪章,细谷佳正,桥诘知久,朴璐美,子安武人
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index74.html"
-                                                                                          title="裤袜视界"
-                                                                                          data-original="/static/uploads/allimg/190513/b667cd627fbc2c51.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index74.html" title="裤袜视界">裤袜视界</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">户松遥,日笠阳子,洲崎绫,茅野爱衣
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index75.html"
-                                                                                          title="进击的巨人第一季"
-                                                                                          data-original="/static/uploads/allimg/190419/a099bb23da80b013.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index75.html"
-                                                                                title="进击的巨人第一季">进击的巨人第一季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">艾伦·耶格尔/三笠·阿克曼</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index76.html"
-                                                                                          title="进击的巨人第三季"
-                                                                                          data-original="/static/uploads/allimg/190419/4c8c01917d9927b2.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index76.html"
-                                                                                title="进击的巨人第三季">进击的巨人第三季</a></h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">梶裕贵 / 石川由依 / 井上麻里奈 /
-                                    神谷浩史 / 三上枝织
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index77.html"
-                                                                                          title="魔道祖师"
-                                                                                          data-original="/static/uploads/allimg/190419/8421273c675657ce.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index77.html" title="魔道祖师">魔道祖师</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">阿杰,边江</div>
-                            </div>
-                            <div class="col-md-2 col-md-3 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                                          href="detail/Index78.html"
-                                                                                          title="一拳超人"
-                                                                                          data-original="/static/uploads/allimg/190419/af2528d7fbdee21c.jpg"
-                                                                                          style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                    class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                <div class="title"><h5 class="text-overflow"><a href="detail/Index78.html" title="一拳超人">一拳超人</a>
-                                </h5></div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs">古川慎,石川界人,梶裕贵,悠木碧
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
                         </div>
                     </div>

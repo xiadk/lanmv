@@ -37,17 +37,27 @@ public class ActionController{
 	private DramaSeriesServiceImpl dramaSeriesService;
 	//欢迎页
 	@GetMapping("/")
-	public String hello() {
-		return "index";
+	public ModelAndView hello() {
+		return index();
 	}
 
 	//首页
 	@GetMapping("/index")
 	public ModelAndView index() {
 
-		ReturnModel<List<Mv>> mvList = iMvService.getMvList(1);
+		//动漫
+		ReturnModel<List<Mv>> mvList1 = iMvService.getMvList(1);
 		Map<String, List<Mv>> map = new HashMap<>();
-		map.put("inv", mvList.getBodyMessage());
+		map.put("comicLists", mvList1.getBodyMessage());
+		//电影
+		ReturnModel<List<Mv>> mvList2 = iMvService.getMvList(2);
+		map.put("moviceLists", mvList2.getBodyMessage());
+		//电视剧
+		ReturnModel<List<Mv>> mvList3 = iMvService.getMvList(3);
+		map.put("tvLists", mvList3.getBodyMessage());
+		//综艺
+		ReturnModel<List<Mv>> mvList4 = iMvService.getMvList(4);
+		map.put("varietyLists", mvList4.getBodyMessage());
 		return new ModelAndView("index",map);
 	}
 
