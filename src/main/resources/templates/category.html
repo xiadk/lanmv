@@ -49,7 +49,10 @@
                         <li class="text"><span class="text-muted">按分类：</span></li>
                         <li><a href="javascript:;">全部</a></li>
 
-                        <li th:each="cate:${categoryList}"><a th:href="@{/category(pageIndex=1, categoryId=${cate.getCategoryId()})}" th:text="${cate.getCategoryName()}"></a></li>
+                        <li th:each="cate:${categoryList}">
+                            <span th:if="${cate.getCategoryId()==currentCategoryId}"><a class="active" th:href="@{/category(pageIndex=1, categoryId=${cate.getCategoryId()})}" th:text="${cate.getCategoryName()}"></a></span>
+                            <span th:unless="${cate.getCategoryId()==currentCategoryId}" ><a th:href="@{/category(pageIndex=1, categoryId=${cate.getCategoryId()})}" th:text="${cate.getCategoryName()}"></a></span>
+                        </li>
                     </ul>
                    <ul class="clearfix">
                         <li class="text"><span class="text-muted">按剧情：</span></li>
@@ -97,53 +100,6 @@
                         <li><a target="_self" href="javascript:;">泰语</a></li>
                         <li><a target="_self" href="javascript:;">法语</a></li>
                     </ul>
-                    <!--
-                    <ul class="clearfix">
-                        <li class="text"><span class="text-muted">按状态：</span></li>
-                        <li><a href="" class="active" target="_self">全部</a></li>
-                        <li><a href="javascript:;" target="_self">完结</a></li>
-                        <li><a href="javascript:;" target="_self">连载中</a></li>
-                    </ul>
-                    <ul class="clearfix">
-                        <li class="text"><span class="text-muted">按来源：</span></li>
-                        <li><a class="active" href="">全部</a></li>
-                        <li><a href="javascript:;">奈菲独家高清片源</a></li>
-                        <li><a href="javascript:;">kuyun</a></li>
-                        <li><a href="javascript:;">ckm3u8</a></li>
-                        <li><a href="javascript:;">33uu</a></li>
-                        <li><a href="javascript:;">33uuck</a></li>
-                    </ul>
-                    <ul class="clearfix">
-                        <li class="text"><span class="text-muted">按字母：</span></li>
-                        <li><a class="active" href="">全部</a></li>
-                        <li><a href="javascript:;">A</a></li>
-                        <li><a href="javascript:;">B</a></li>
-                        <li><a href="javascript:;">C</a></li>
-                        <li><a href="javascript:;">D</a></li>
-                        <li><a href="javascript:;">E</a></li>
-                        <li><a href="javascript:;">F</a></li>
-                        <li><a href="javascript:;">G</a></li>
-                        <li><a href="javascript:;">H</a></li>
-                        <li><a href="javascript:;">I</a></li>
-                        <li><a href="javascript:;">J</a></li>
-                        <li><a href="javascript:;">K</a></li>
-                        <li><a href="javascript:;">L</a></li>
-                        <li><a href="javascript:;">M</a></li>
-                        <li><a href="javascript:;">N</a></li>
-                        <li><a href="javascript:;">O</a></li>
-                        <li><a href="javascript:;">P</a></li>
-                        <li><a href="javascript:;">Q</a></li>
-                        <li><a href="javascript:;">R</a></li>
-                        <li><a href="javascript:;">S</a></li>
-                        <li><a href="javascript:;">T</a></li>
-                        <li><a href="javascript:;">U</a></li>
-                        <li><a href="javascript:;">V</a></li>
-                        <li><a href="javascript:;">W</a></li>
-                        <li><a href="javascript:;">X</a></li>
-                        <li><a href="javascript:;">Y</a></li>
-                        <li><a href="javascript:;">Z</a></li>
-                        <li><a href="javascript:;">0-9</a></li>
-                    </ul>-->
                 </div>
             </div>
         </div>

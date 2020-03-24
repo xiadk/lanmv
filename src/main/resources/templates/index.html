@@ -51,10 +51,8 @@
             <div class="clearfix list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                 <div class="hy-video-list cleafix">
                     <div class="item">
-
                         <!-- 懒懒独家样式-->
-
-                        <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${inv}">
+                        <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${comicLists}">
                             <a class="videopic lazy"
                                th:href="@{~/detail(mvId=${mv.getMvId()})}"
                                th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
@@ -67,164 +65,18 @@
                                     <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                 </h5>
                             </div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
-
-                            </div>
+                            <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
-            <div class="hy-video-footer visible-xs clearfix"><a th:href="@{/category}"
-                                                                class="text-muted" title="查看更多">查看更多 <i
-                    class="icon iconfont icon-right pull-right"></i></a></div>
+            <div class="hy-video-footer visible-xs clearfix">
+                <a href="search-5_time_E5A588E88FB2E78BAC.html" class="text-muted" title="查看更多">查看更多 <i class="icon iconfont icon-right pull-right"></i></a></div>
         </div>
-        <!--<div class="hy-layout clearfix">
-            <div class="hy-video-head"><h3 class="margin-0"><i class="icon iconfont icon-update text-color"></i> 最近热播
-            </h3>
-                <ul class="pull-right">
-                    <li class="active"><a href="search-5_hit.html" class="text-muted" title="更多">更多 <i
-                            class="icon iconfont icon-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="clearfix list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
-                <div class="hy-video-list cleafix">
-                    <div class="item">
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index24.html"
-                                                                    title="小丑2019"
-                                                                    data-original="/static/uploads/allimg/191007/9d7c3008e4fd741b.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HD特效遮韩文硬字幕</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index24.html" title="小丑2019">小丑2019</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                杰昆·菲尼克斯,罗伯特·德尼罗,莎姬·贝兹,布莱恩·考伦
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index25.html"
-                                                                    title="海贼王"
-                                                                    data-original="/static/uploads/allimg/190419/29abf17ce277a132.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至910集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index25.html"
-                                                                            title="海贼王">海贼王</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">田中真弓,冈村明美,中井和哉,平田广明
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index26.html"
-                                                                    title="致命女人"
-                                                                    data-original="/static/uploads/allimg/190819/856e75842a4c151e.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index26.html"
-                                                                            title="致命女人">致命女人</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">刘玉玲,金妮弗·古德温,
-                                瑞德·斯科特,山姆·贾格,亚历珊德拉·达达里奥,柯尔比·豪威尔-巴普蒂斯特,赛迪·卡尔瓦诺,杰克·达文波特,里奥·霍华德,艾丽莎
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index27.html"
-                                                                    title="斗罗大陆第1季"
-                                                                    data-original="/static/uploads/allimg/190419/d303ea3dac8a2813.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至78集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index27.html" title="斗罗大陆第1季">斗罗大陆第1季</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">沈磊,翟巍,吴磊,陶典</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index28.html"
-                                                                    title="速度与激情：特别行动"
-                                                                    data-original="/static/uploads/allimg/190819/3b7c10d6c20df518.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index28.html"
-                                                                            title="速度与激情：特别行动">速度与激情：特别行动</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                道恩·强森,杰森·斯坦森,伊德里斯·艾尔巴,艾莎·冈萨雷斯,凡妮莎·柯比,埃迪·马森,罗曼·雷恩斯,斯蒂芬妮·沃格特,维克托里娅·菲斯,康兰·卡萨尔,海伦
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 "><a class="videopic lazy" href="detail/Index29.html"
-                                                                    title="流浪者/浪客行"
-                                                                    data-original="/static/uploads/allimg/190921/0719a09d83abfe16.jpg"
-                                                                    style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至14集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index29.html" title="流浪者/浪客行">流浪者/浪客行</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                李昇基,裴秀智,申成禄,郑满植,金民钟,白润植,李璟荣,文成根
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index30.html" title="少年的你"
-                                                                             data-original="/static/uploads/allimg/191026/f96a0ffe0c05217d.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HC</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index30.html"
-                                                                            title="少年的你">少年的你</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">周冬雨,易烊千玺,尹昉,黄觉</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index31.html" title="银河补习班"
-                                                                             data-original="/static/uploads/allimg/190717/0fbf470d7c8ad368.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">BD</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index31.html" title="银河补习班">银河补习班</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">邓超,白宇,任素汐,王西</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index32.html" title="在远方"
-                                                                             data-original="/static/uploads/allimg/190923/abb6ba290a75ce0f.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index32.html"
-                                                                            title="在远方">在远方</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">刘烨,马伊琍,梅婷,保剑锋,曾黎,程煜,郑奇
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index33.html" title="小丑回魂2"
-                                                                             data-original="/static/uploads/allimg/190930/2ed22e150f68a514.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">HD</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index33.html" title="小丑回魂2">小丑回魂2</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">詹姆斯麦卡沃伊 / 杰西卡查斯坦 /
-                                比尔斯卡斯加德 / 比尔哈德尔 / 索菲娅莉莉丝 / 杰克迪伦格雷泽 / 菲恩伍法德 / 杰登马泰尔 / 特洛伊詹姆斯 / 哈维尔博
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index34.html" title="灵笼"
-                                                                             data-original="/static/uploads/allimg/190713/fb45360e385d9fad.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至6集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index34.html" title="灵笼">灵笼</a>
-                            </h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">黄莺,李元韬,陶典,程玉珠,夏一可</div>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 hidden-xs"><a class="videopic lazy"
-                                                                             href="detail/Index35.html" title="新石纪"
-                                                                             data-original="/static/uploads/allimg/190702/851d349f4f0ad362.jpg"
-                                                                             style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                class="play hidden-xs"></span><span class="note textbg">更新至20集</span></a>
-                            <div class="title"><h5 class="text-overflow"><a href="detail/Index35.html"
-                                                                            title="新石纪">新石纪</a></h5></div>
-                            <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                小林裕介,古川慎,市之濑加那,中村悠一,佐藤元,沼仓爱美,前野智昭,村濑步,高桥花林,上田丽奈,河西健吾,麦人
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hy-video-footer visible-xs clearfix"><a href="search-5_hit.html" class="text-muted"
-                                                                title="查看更多">查看更多 <i
-                    class="icon iconfont icon-right pull-right"></i></a></div>
-        </div>-->
         <div class="hy-layout clearfix">
             <div class="hy-video-head">
                 <ul class="pull-right">
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index4.html"
+                    <!--<li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index4.html"
                                                                             class="text-muted border-right">动作片</a> /
                     </li>
                     <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index5.html"
@@ -247,7 +99,7 @@
                     </li>
                     <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index11.html"
                                                                             class="text-muted border-right">剧情片</a> /
-                    </li>
+                    </li>-->
                     <li class="active"><a href="list/Index.html" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
@@ -255,9 +107,9 @@
             <div class="clearfix">
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-
-                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${movies}">
+                        <div class="item">
+                            <!-- 电影-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${moviceLists}">
                                 <a class="videopic lazy"
                                    th:href="@{~/detail(mvId=${mv.getMvId()})}"
                                    th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
@@ -270,12 +122,8 @@
                                         <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
-
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -286,18 +134,6 @@
         <div class="hy-layout clearfix">
             <div class="hy-video-head">
                 <ul class="pull-right">
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index12.html"
-                                                                            class="text-muted border-right">大陆剧</a> /
-                    </li>
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index13.html"
-                                                                            class="text-muted border-right">港台剧</a> /
-                    </li>
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index14.html"
-                                                                            class="text-muted border-right">欧美剧</a> /
-                    </li>
-                    <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index15.html"
-                                                                            class="text-muted border-right">日韩剧</a> /
-                    </li>
                     <li class="active"><a href="list/Index1.html" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
@@ -305,9 +141,9 @@
             <div class="clearfix">
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-
-                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${series}">
+                        <div class="item">
+                            <!-- 电影-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${tvLists}">
                                 <a class="videopic lazy"
                                    th:href="@{~/detail(mvId=${mv.getMvId()})}"
                                    th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
@@ -320,11 +156,8 @@
                                         <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
-
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -350,9 +183,9 @@
                 </div>
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-
-                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${variety}">
+                        <div class="item">
+                            <!-- 综艺-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${varietyLists}">
                                 <a class="videopic lazy"
                                    th:href="@{~/detail(mvId=${mv.getMvId()})}"
                                    th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
@@ -365,12 +198,8 @@
                                         <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
-
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -399,9 +228,9 @@
                 </div>
                 <div class="list_01 col-md-7 col-sm-12 col-xs-12 padding-0">
                     <div class="hy-video-list clearfix">
-                        <div class="item clearfix">
-
-                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${anime}">
+                        <div class="item">
+                            <!-- 动漫-->
+                            <div class="col-md-2 col-sm-3 col-xs-4 " th:each="mv:${comicLists}">
                                 <a class="videopic lazy"
                                    th:href="@{~/detail(mvId=${mv.getMvId()})}"
                                    th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
@@ -414,11 +243,8 @@
                                         <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
-                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}">
-
-                                </div>
+                                <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -66,11 +66,10 @@
                 </div>
                 <ul class="menulist hidden-xs">
                     <li><a th:href="@{/index}">首页</a></li>
-                    <li><a href="list/Index.html"> 电影</a></li>
-                    <li><a href="list/Index1.html"> 电视剧</a></li>
-                    <li><a href="list/Index2.html"> 综艺</a></li>
-                    <li><a href="list/Index3.html"> 动漫</a></li>
-                    <li><a href="javascript:;" target="_blank" style="color: red;">奈菲影视电报群</a></li>
+                    <li><a th:href="@{/category(categoryId=2)}"> 电影</a></li>
+                    <li><a th:href="@{/category(categoryId=3)}"> 电视剧</a></li>
+                    <li><a th:href="@{/category(categoryId=4)}"> 综艺</a></li>
+                    <li><a th:href="@{/category(categoryId=1)}"> 动漫</a></li>
                 </ul>
             </div>
         </div>
