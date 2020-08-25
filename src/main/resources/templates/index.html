@@ -62,7 +62,7 @@
                             </a>
                             <div class="title">
                                 <h5 class="text-overflow">
-                                    <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                    <a  th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                 </h5>
                             </div>
                             <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
@@ -100,7 +100,7 @@
                     <li class="text-muted hidden-md hidden-sm hidden-xs"><a href="list/Index11.html"
                                                                             class="text-muted border-right">剧情片</a> /
                     </li>-->
-                    <li class="active"><a href="list/Index.html" class="text-muted" title="查看更多">更多 <i
+                    <li class="active"><a th:href="@{/category(categoryId=2)}" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
                 <h3 class="margin-0"><i class="icon iconfont icon-film text-color"></i> 电影</h3></div>
@@ -119,7 +119,7 @@
                                 </a>
                                 <div class="title">
                                     <h5 class="text-overflow">
-                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                        <a  th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
                                 <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
@@ -134,7 +134,7 @@
         <div class="hy-layout clearfix">
             <div class="hy-video-head">
                 <ul class="pull-right">
-                    <li class="active"><a href="list/Index1.html" class="text-muted" title="查看更多">更多 <i
+                    <li class="active"><a th:href="@{/category(categoryId=3)}" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
                 <h3 class="margin-0"><i class="icon iconfont icon-show text-color"></i> 电视剧</h3></div>
@@ -153,7 +153,7 @@
                                 </a>
                                 <div class="title">
                                     <h5 class="text-overflow">
-                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                        <a  th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
                                 <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
@@ -168,7 +168,7 @@
         <div class="hy-layout clearfix">
             <div class="hy-video-head"><h3 class="margin-0"><i class="icon iconfont icon-flag text-color"></i> 综艺</h3>
                 <ul class="pull-right">
-                    <li class="active"><a href="list/Index2.html" class="text-muted">更多 <i
+                    <li class="active"><a th:href="@{/category(categoryId=4)}" class="text-muted">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
             </div>
@@ -195,7 +195,7 @@
                                 </a>
                                 <div class="title">
                                     <h5 class="text-overflow">
-                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                        <a  th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
                                 <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
@@ -211,7 +211,7 @@
             <div class="hy-video-head"><h3 class="margin-0"><i class="icon iconfont icon-mallanimation text-color"></i>
                 动漫</h3>
                 <ul class="pull-right">
-                    <li class="active"><a href="list/Index3.html" class="text-muted" title="查看更多">更多 <i
+                    <li class="active"><a th:href="@{/category(categoryId=1)}" class="text-muted" title="查看更多">更多 <i
                             class="icon iconfont icon-right"></i></a></li>
                 </ul>
             </div>
@@ -240,7 +240,7 @@
                                 </a>
                                 <div class="title">
                                     <h5 class="text-overflow">
-                                        <a href="detail/Index.html" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
+                                        <a  th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5>
                                 </div>
                                 <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
@@ -252,7 +252,7 @@
             <div class="hy-video-footer visible-xs clearfix"><a href="search-5_4.html" class="text-muted" title="查看更多">查看更多
                 <i class="icon iconfont icon-right pull-right"></i></a></div>
         </div>
-        <div class="hy-layout hidden-sm hidden-xs clearfix">
+        <!--<div class="hy-layout hidden-sm hidden-xs clearfix">
             <div class="hy-video-head"><h3 class="margin-0">友情链接</h3></div>
             <div class="hy-footer-link">
                 <div class="item clearfix">
@@ -269,7 +269,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <script type="text/javascript">

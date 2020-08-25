@@ -54,13 +54,6 @@
                             <span th:unless="${cate.getCategoryId()==currentCategoryId}" ><a th:href="@{/category(pageIndex=1, categoryId=${cate.getCategoryId()})}" th:text="${cate.getCategoryName()}"></a></span>
                         </li>
                     </ul>
-                   <ul class="clearfix">
-                        <li class="text"><span class="text-muted">按剧情：</span></li>
-                        <li><a href="" class="active">全部</a></li>
-                        <li><a href="javascript:;">年代</a></li>
-                        <li><a href="javascript:;">悬疑</a></li>
-                        <li><a href="javascript:;">古装</a></li>
-                    </ul>
                     <ul class="clearfix">
                         <li class="text"><span class="text-muted">按地区：</span></li>
                         <li><a href="" class="active">全部</a></li>
@@ -88,17 +81,6 @@
                         <li><a href="javascript:;">2010</a></li>
                         <li><a href="javascript:;">2009</a></li>
                         <li><a href="javascript:;">更早</a></li>
-                    </ul>
-                    <ul class="clearfix">
-                        <li class="text"><span class="text-muted">按语言：</span></li>
-                        <li><a class="active" target="_self" href="">全部</a></li>
-                        <li><a target="_self" href="javascript:;">国语</a></li>
-                        <li><a target="_self" href="javascript:;">粤语</a></li>
-                        <li><a target="_self" href="javascript:;">英语</a></li>
-                        <li><a target="_self" href="javascript:;">日语</a></li>
-                        <li><a target="_self" href="javascript:;">韩语</a></li>
-                        <li><a target="_self" href="javascript:;">泰语</a></li>
-                        <li><a target="_self" href="javascript:;">法语</a></li>
                     </ul>
                 </div>
             </div>
