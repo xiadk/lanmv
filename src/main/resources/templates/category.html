@@ -144,8 +144,8 @@
                             </span>
                         </span>
 
-                    <li><a th:href="@{/search(pageIndex=${pageModel.getPageIndex()+1},categoryId=${currentCategoryId})}">下一页</a></li>
-                    <li><a th:href="@{/search(pageIndex=${pageModel.getTotalPage()},categoryId=${currentCategoryId})}">尾页</a></li>
+                    <li><a th:href="@{/category(pageIndex=${pageModel.getPageIndex()+1},categoryId=${currentCategoryId})}">下一页</a></li>
+                    <li><a th:href="@{/category(pageIndex=${pageModel.getTotalPage()},categoryId=${currentCategoryId})}">尾页</a></li>
                 </ul>
             </div>
         </div>

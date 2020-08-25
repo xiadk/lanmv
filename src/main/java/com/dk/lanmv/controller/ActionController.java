@@ -127,7 +127,7 @@ public class ActionController{
 
 	//播放器页
 	@GetMapping("/search")
-	public ModelAndView search(@RequestParam(required=false, defaultValue = "1")Integer pageIndex, @RequestParam(required=false)String searchword) {
+	public ModelAndView search(@RequestParam(required=false, defaultValue = "1")Integer pageIndex, @RequestParam(required=false, defaultValue = "")String searchword) {
 
 		ReturnModel<PageModel<MvCategoryInfo>> mvInfoBySearch = iMvService.getMvInfoBySearch(pageIndex, searchword);
 		Map<String, Object> map = new HashMap<>();
