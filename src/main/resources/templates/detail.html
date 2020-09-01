@@ -72,8 +72,8 @@
             <div class="hy-layout active clearfix">
                 <div class="hy-switch-tabs">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="" data-toggle="tab" title="播放线路">播放线路</a></li>
-                        <li><a href="" data-toggle="tab" title="剧情介绍">剧情介绍</a></li>
+                        <li id = "tab1" class="active"><a href="" data-toggle="tab" title="播放线路">播放线路</a></li>
+                        <li id = "tab2"><a href="" data-toggle="tab" title="剧情介绍">剧情介绍</a></li>
                     </ul>
                 </div>
                 <div class="tab-content">
@@ -93,9 +93,6 @@
                         </div>
                     </div>
                     <div class="hy-play-list tab-pane fade in" id="list2">
-                        <div class="item" id="downlist"></div>
-                    </div>
-                    <div class="hy-play-list tab-pane fade in" id="list3">
                         <div class="item">
                             <div class="plot" th:text="${mvInfo.getMvSynopsis()}"></div>
                         </div>
@@ -109,126 +106,17 @@
                         <h3 class="margin-0">猜你喜欢</h3></div>
                     <div class="swiper-container hy-switch">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="" title="从前有座灵剑山电视版"
-                                                     data-original="https://www.nfmovies.comhttps://www.nfmovies.com/uploads/allimg/191113/8dcfb2b63e3b1cd3.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
+                            <div class="swiper-slide" th:each="mv:${loveLists}">
+                                <div class="item"><a class="videopic lazy" th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}, data-original=${mv.getMvPicture()}"
+                                                     style="background: url(/static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
                                         class="play hidden-xs"></span><span class="note textbg">更新至20集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="" title="从前有座灵剑山电视版">从前有座灵剑山电视版</a>
+                                    <div class="title"><h5 class="text-overflow">
+                                        <a  th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"></a>
                                     </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        许凯,张榕容,朱元冰,高雨儿,郭晓婷,合文俊,郑雅文,李俊浩
-                                    </div>
+                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs" th:text="${mv.getMvStar()}"></div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="Index1.html" title="时空来电"
-                                                     data-original="/uploads/allimg/191024/f3ea99146af8e044.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="Index1.html"
-                                                                                    title="时空来电">时空来电</a></h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">杜淳,李小冉,王天辰</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="Index8.html" title="我爱你，这是最好的安排"
-                                                     data-original="/uploads/allimg/201910/8019485ac48e6db2.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">完结</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="Index8.html"
-                                                                                    title="我爱你，这是最好的安排">我爱你，这是最好的安排</a>
-                                    </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs"> 张彬彬 / 郑合惠子 /
-                                        孔舒航 / 高洋
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="Index9.html" title="热血少年"
-                                                     data-original="/uploads/allimg/191023/9556c041cb024dc0.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至44集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="Index9.html"
-                                                                                    title="热血少年">热血少年</a></h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        黄子韬,张雪迎,刘宇宁,曹曦月,王劲松,张帆,朱杰,泓萱,卢星宇,黄少祺
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="Index13.html" title="鳄鱼与牙签鸟"
-                                                     data-original="/uploads/allimg/191119/468303f4d15dd54b.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至7集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="Index13.html" title="鳄鱼与牙签鸟">鳄鱼与牙签鸟</a>
-                                    </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        张天爱,陈柏霖,吴昊宸,黄一琳,刘凯
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="javascript:;" title="鳄鱼与牙签鸟DVD版"
-                                                     data-original="/uploads/allimg/191119/07b24ce79d233ef2.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至7集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="javascript:;"
-                                                                                    title="鳄鱼与牙签鸟DVD版">鳄鱼与牙签鸟DVD版</a>
-                                    </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        张天爱,陈柏霖,吴昊宸,黄一琳,刘凯
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="Index20.html" title="归鸿"
-                                                     data-original="/uploads/allimg/191107/30d0fc6c47450aa6.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至34集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="Index20.html"
-                                                                                    title="归鸿">归鸿</a></h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        凌潇肃,富大龙,刘一含,石天琦,邵峰,李恩欣,仇永力,何政军,白凡,冯恩鹤,陈逸
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="Index22.html" title="希望的大地"
-                                                     data-original="/uploads/allimg/191026/481712ee3324b45b.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至24集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="Index22.html" title="希望的大地">希望的大地</a>
-                                    </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        杨梓铎,姜妍,印小天,菅纫姿,林江国,宗峰岩,张丰毅,李幼斌,巫刚,侯勇,刘佳,林永健,李雪健,王丽云,徐佳,斓曦,张博宇,杨菲洋,南吉,王伟,柳小海,杨念生,温浩铎
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="javascript:;" title="初恋那件小事"
-                                                     data-original="/uploads/allimg/191024/6e877660cb22f8ce.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至34集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="javascript:;" title="初恋那件小事">初恋那件小事</a>
-                                    </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        赖冠霖,赵今麦,柴蔚,王润泽,王博文
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item"><a class="videopic lazy" href="javascript:;" title="扑通扑通的青春"
-                                                     data-original="/uploads/allimg/191024/2d472c8f283550e1.jpg"
-                                                     style="background: url(....................................../static/images/load.gif) no-repeat; background-position:50% 50%; background-size: cover;"><span
-                                        class="play hidden-xs"></span><span class="note textbg">更新至30集</span></a>
-                                    <div class="title"><h5 class="text-overflow"><a href="javascript:;" title="扑通扑通的青春">扑通扑通的青春</a>
-                                    </h5></div>
-                                    <div class="subtitle text-muted text-muted text-overflow hidden-xs">
-                                        谷嘉诚,戚砚笛,查侬·散顶腾古,孙伟豪,方川,魏瑾,徐可珑
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="swiper-button-next"><i class="icon iconfont icon-right"></i></div>
                         <div class="swiper-button-prev"><i class="icon iconfont icon-back"></i></div>
@@ -236,62 +124,18 @@
                     <div class="hy-video-text-list hidden-xs clearfix">
                         <div class="item">
                             <ul class="clearfix">
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="第二次也很美"><span
+                                <li class="list5 " th:each="mv:${briefLists}">
+                                    <div class="title text-overflow"><a th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}"><span
                                             class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>第二次也很美</a></div>
+                                            class="icon iconfont icon-right text-muted"></i></span></a></div>
                                 </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="心灵法医"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>心灵法医</a></div>
-                                </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="最强狂兵"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>最强狂兵</a></div>
-                                </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="彩虹的重力"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>彩虹的重力</a></div>
-                                </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="谁的青春不叛逆2019"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>谁的青春不叛逆20..</a></div>
-                                </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="都是一家人"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>都是一家人</a></div>
-                                </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="河山"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>河山</a></div>
-                                </li>
-                                <li class="list5 ">
-                                    <div class="title text-overflow"><a href="javascript:;" title="红鲨突击"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>红鲨突击</a></div>
-                                </li>
-                                <li class="list5 hidden-sm">
-                                    <div class="title text-overflow"><a href="javascript:;" title="我的机器人男友"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>我的机器人男友</a></div>
-                                </li>
-                                <li class="list5 hidden-sm">
-                                    <div class="title text-overflow"><a href="javascript:;" title="幸福保卫战"><span
-                                            class="pull-right"><i
-                                            class="icon iconfont icon-right text-muted"></i></span>幸福保卫战</a></div>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="hy-layout clearfix">
+           <!-- <div class="hy-layout clearfix">
                 <div class="hy-video-list">
                     <div class="hy-video-head"><a class="text-muted pull-right" href="javascript:;" title="更多">更多 <i
                             class="icon iconfont icon-right"></i></a>
@@ -483,7 +327,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="col-md-3 col-sm-12 hy-main-side hidden-sm hidden-xs">
             <div class="hy-layout clearfix">
@@ -493,36 +337,13 @@
                 <div class="hy-video-ranking side clearfix">
                     <div class="head"><a class="text-muted pull-right" href="javascript:;" title="更多">更多 <i
                             class="icon iconfont icon-right"></i></a><h4><i
-                            class="icon iconfont icon-top text-color"></i> 大陆剧排行榜</h4></div>
+                            class="icon iconfont icon-top text-color"></i> 排行榜</h4></div>
                     <div class="item">
-                        <ul class="clearfix">
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="鬼吹灯之牧野诡事"><em
-                                    class="number active">1</em>鬼吹灯之牧野诡事</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="秘果"><em
-                                    class="number active">2</em>秘果</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="择天记"><em
-                                    class="number active">3</em>择天记</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="白鹿原"><em
-                                    class="number ">4</em>白鹿原</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="画心师"><em
-                                    class="number ">5</em>画心师</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="龙珠传奇之无间道"><em
-                                    class="number ">6</em>龙珠传奇之无间道</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="求婚大作战"><em
-                                    class="number ">7</em>求婚大作战</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="欢乐颂2"><em
-                                    class="number ">8</em>欢乐颂2</a></li>
-                            <li class="text-overflow"><span class="pull-right text-color">0</span><a href="javascript:;"
-                                                                                                     title="关东大先生"><em
-                                    class="number ">9</em>关东大先生</a></li>
+                        <ul class="clearfix" >
+                            <li class="text-overflow" th:each="mv:${holdLists}">
+                                <span class="pull-right text-color" th:text="${mv.getMvViews()}"></span>
+                                <a th:href="@{~/detail(mvId=${mv.getMvId()})}" th:attr="title=${mv.getMvName()}" th:text="${mv.getMvName()}">
+                                    <em class="number active">1</em></a></li>
                         </ul>
                     </div>
                 </div>
@@ -619,13 +440,21 @@ root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
         });
     }
 
+    $("#tab1").click(function(){
+        $("#list1").addClass("active");
+        $("#list2").removeClass("active");
+
+    });
+
+    $("#tab2").click(function(){
+        $("#list1").removeClass("active");
+        $("#list2").addClass("active");
+    });
+
 
 </script>
 <script src="/static/js/20479577.js" type="text/javascript"></script>
 <script type="text/javascript" src="/static/js/front.js"></script>
-
-
-<script src="/static/js/rocket-loader.min.js"
-        data-cf-settings="|49" defer=""></script>
+<script src="/static/js/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>
 </body>
 </html>

@@ -44,19 +44,20 @@ public class ActionController{
 	//首页
 	@GetMapping("/index")
 	public ModelAndView index() {
+		int pageSize = 12;
 
 		//动漫
-		ReturnModel<List<Mv>> mvList1 = iMvService.getMvList(1);
+		ReturnModel<List<Mv>> mvList1 = iMvService.getMvList(1,pageSize);
 		Map<String, List<Mv>> map = new HashMap<>();
 		map.put("comicLists", mvList1.getBodyMessage());
 		//电影
-		ReturnModel<List<Mv>> mvList2 = iMvService.getMvList(2);
+		ReturnModel<List<Mv>> mvList2 = iMvService.getMvList(2, pageSize);
 		map.put("moviceLists", mvList2.getBodyMessage());
 		//电视剧
-		ReturnModel<List<Mv>> mvList3 = iMvService.getMvList(3);
+		ReturnModel<List<Mv>> mvList3 = iMvService.getMvList(3, pageSize);
 		map.put("tvLists", mvList3.getBodyMessage());
 		//综艺
-		ReturnModel<List<Mv>> mvList4 = iMvService.getMvList(4);
+		ReturnModel<List<Mv>> mvList4 = iMvService.getMvList(4, pageSize);
 		map.put("varietyLists", mvList4.getBodyMessage());
 		return new ModelAndView("index",map);
 	}
@@ -64,13 +65,24 @@ public class ActionController{
 	//详情页
 	@GetMapping("/detail")
 	public ModelAndView detail(@RequestParam(required=true)Long mvId) {
-		ReturnModel<MvCategoryInfo> mvList = iMvService.getMvInfo(mvId);
+		Map<String, Object> map = new HashMap<>();
+
+		ReturnModel<MvCategoryInfo> MvCategoryInfoList = iMvService.getMvInfo(mvId);
+		map.put("mvInfo", MvCategoryInfoList.getBodyMessage());
+
 		ReturnModel<List<DramaSeries>> dramaInfo = dramaSeriesService.getDramaList(mvId);
 		List<DramaSeries> dramaSeriesList = dramaInfo.getBodyMessage();
-
-		Map<String, Object> map = new HashMap<>();
 		map.put("dramaSeries", dramaSeriesList);
-		map.put("mvInfo", mvList.getBodyMessage());
+
+		//获取喜欢影片
+		ReturnModel<List<Mv>> loveLists = iMvService.getLoveMvList(mvId);
+		List<Mv> mvList = loveLists.getBodyMessage();
+		map.put("loveLists", mvList.subList(0, 10));
+		map.put("briefLists", mvList.subList(10, 20));
+
+		//获取热门影片
+		ReturnModel<List<Mv>> holdMvList = iMvService.getHoldMvList();
+		map.put("holdLists", holdMvList.getBodyMessage());
 
 		return new ModelAndView("detail",map);
 	}
@@ -90,6 +102,16 @@ public class ActionController{
 		map.put("currentDramaSeries", currentDramaSeries);
 		ReturnModel<Mv> mv = iMvService.getMvInfo(mvId);
 		map.put("mv", mv.getBodyMessage());
+
+		//获取喜欢影片
+		ReturnModel<List<Mv>> loveLists = iMvService.getLoveMvList(mvId);
+		List<Mv> mvList = loveLists.getBodyMessage();
+		map.put("loveLists", mvList.subList(0, 10));
+		map.put("briefLists", mvList.subList(10, 20));
+
+		//获取热门影片
+		ReturnModel<List<Mv>> holdMvList = iMvService.getHoldMvList();
+		map.put("holdLists", holdMvList.getBodyMessage());
 
 		return new ModelAndView("video", map);
 	}

@@ -84,7 +84,15 @@ public class Mv implements Serializable {
      */
     private String mvOrigin;
 
+    /**
+     * 浏览量
+     */
+    private Long mvViews;
 
+    /**
+     * 热门标识（0：否 1：是)
+     */
+    private Integer mvHold;
 
 
 }

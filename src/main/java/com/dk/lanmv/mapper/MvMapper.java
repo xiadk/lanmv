@@ -29,4 +29,7 @@ public interface MvMapper extends BaseMapper<Mv> {
     @Select("select * from t_mv  order by mv_id desc limit 1")
     Mv getOneLastMvInfo();
 
+    @Select("select * from t_mv where mv_hold = 1 order by mv_views desc")
+    List<Mv> getHoldMvInfo();
+
 }

@@ -35,18 +35,16 @@ public class MvServiceImpl extends ServiceImpl<MvMapper, Mv> implements IMvServi
     @Autowired
     private MvMapper mvMapper;
 
-    public static void main(String[] args) {
-        System.out.println(new Random().nextInt(10));
-    }
     @Override
-    public ReturnModel getMvList(int categoryId) {
+    public ReturnModel getMvList(int categoryId, int pageSize) {
         ReturnModel returnModel = new ReturnModel();
 
-        int pageSize = 12;
         Mv oneLastMvInfo = mvMapper.getOneLastMvInfo();
+
         long lastMvId = oneLastMvInfo.getMvId();
         Random random = new Random();
         int mvId = random.nextInt((int) lastMvId - pageSize);
+
         QueryWrapper<Mv> queryWrapper = new QueryWrapper<>();
         if (categoryId != 0){
             queryWrapper.eq("category_id", categoryId);
@@ -133,6 +131,35 @@ public class MvServiceImpl extends ServiceImpl<MvMapper, Mv> implements IMvServi
         pageModel.setTotalPage(totalPage);
         returnModel.setBodyMessage(pageModel);
 
+        return returnModel;
+    }
+
+    @Override
+    public ReturnModel getLoveMvList(long mvId) {
+        ReturnModel returnModel = new ReturnModel();
+
+        Mv mv = getById(mvId);
+
+        ReturnModel<List<Mv>> mvReturnModel = getMvList(mv.getCategoryId(), 21);
+
+        List<Mv> mvList = mvReturnModel.getBodyMessage();
+        mvList = mvList.stream().filter(mv1->mv1.getMvId() != mvId).limit(20).collect(Collectors.toList());
+
+        if  (mvList.size() < 20){
+            mvList.addAll((List<Mv>)getHoldMvList().getBodyMessage());
+        }
+
+        returnModel.setBodyMessage(mvList);
+        return returnModel;
+    }
+
+    @Override
+    public ReturnModel getHoldMvList() {
+        ReturnModel returnModel = new ReturnModel();
+
+        List<Mv> holdMvInfo = mvMapper.getHoldMvInfo();
+
+        returnModel.setBodyMessage(holdMvInfo);
         return returnModel;
     }
 }
