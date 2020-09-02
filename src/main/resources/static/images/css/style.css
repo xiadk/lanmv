@@ -751,7 +751,7 @@ a:focus, a:hover, a:link {
 }
 
 .hy-player .item .info {
-    height: 540px
+    height: 496px
 }
 
 .hy-player .item .footer {
@@ -1858,8 +1858,8 @@ a:focus, a:hover, a:link {
     }
 
     .hy-player .item .info {
-        height: 280px;
-        padding: 10px 0
+        height: 228px;
+        #padding: 10px 0
     }
 
     .hy-player .item .footer {
