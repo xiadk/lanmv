@@ -282,12 +282,10 @@
     });
 
 </script>
-<div class="tabbar visible-xs"><a href="" class="item active"><i class="icon iconfont icon-home"></i>
-    <p class="text">首页</p></a><a href="list/Index.html" class="item"><i class="icon iconfont icon-film"></i>
-    <p class="text">电影 </p></a><a href="list/Index1.html" class="item"><i class="icon iconfont icon-show"></i>
-    <p class="text">电视剧 </p></a><a href="list/Index2.html" class="item"><i class="icon iconfont icon-flag"></i>
-    <p class="text">综艺 </p></a><a href="list/Index3.html" class="item"><i class="icon iconfont icon-mallanimation"></i>
-    <p class="text">动漫 </p></a></div>
+
+<!--手机h5底部导航公共 -->
+<div th:replace="~{common/tabbar::tabbar}"></div>
+
 <div class="container">
     <div class="row">
         <div class="hy-footer clearfix"><p class="margin-0 text-muted">Copyright © 2019 All Rights Reserved
